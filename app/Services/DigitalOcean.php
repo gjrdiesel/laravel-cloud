@@ -174,7 +174,7 @@ class DigitalOcean implements ServerProviderClient
             'name'               => $name,
             'size'               => $size,
             'region'             => $region,
-            'image'              => 'ubuntu-17-04-x64',
+            'image'              => 'ubuntu-19-04-x64',
             'ipv6'               => true,
             'private_networking' => true,
             'ssh_keys'           => [$this->keyId()],
