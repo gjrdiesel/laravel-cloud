@@ -4,10 +4,10 @@ namespace Tests\Feature;
 
 use App\Database;
 use App\IpAddress;
-use Tests\TestCase;
 use App\ShellProcessRunner;
 use Facades\App\ServerProviderClientFactory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class ProvisionableTest extends TestCase
 {

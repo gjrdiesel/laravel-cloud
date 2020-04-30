@@ -2,11 +2,11 @@
 
 namespace App\Services;
 
-use Exception;
-use Aws\S3\S3Client;
+use App\Contracts\StorageProviderClient;
 use App\DatabaseBackup;
 use App\StorageProvider;
-use App\Contracts\StorageProviderClient;
+use Aws\S3\S3Client;
+use Exception;
 
 class S3 implements StorageProviderClient
 {
