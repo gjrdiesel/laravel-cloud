@@ -2,14 +2,14 @@
 
 namespace App\Jobs;
 
+use App\Mail\StackProvisioned;
 use App\Stack;
 use Illuminate\Bus\Queueable;
-use App\Mail\StackProvisioned;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Mail;
 
 class MarkStackAsProvisioned implements ShouldQueue
 {
