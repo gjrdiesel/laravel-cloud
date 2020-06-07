@@ -2,12 +2,12 @@
 
 namespace App\Services;
 
-use Exception;
-use GuzzleHttp\Client;
-use App\ServerProvider;
-use InvalidArgumentException;
 use App\Contracts\Provisionable;
 use App\Contracts\ServerProviderClient;
+use App\ServerProvider;
+use Exception;
+use GuzzleHttp\Client;
+use InvalidArgumentException;
 
 class DigitalOcean implements ServerProviderClient
 {

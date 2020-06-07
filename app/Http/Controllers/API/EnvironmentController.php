@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\API;
 
 use App\Environment;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Encryption\Encrypter;
+use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
 class EnvironmentController extends Controller
