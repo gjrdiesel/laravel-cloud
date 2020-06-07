@@ -2,15 +2,15 @@
 
 namespace App;
 
-use Carbon\Carbon;
-use App\Jobs\SyncNetwork;
+use App\Callbacks\MarkAsProvisioned;
+use App\Contracts\Provisionable as ProvisionableContract;
+use App\Jobs\DeleteServerOnProvider;
 use App\Jobs\ProvisionDatabase;
 use App\Jobs\StoreDatabaseBackup;
-use App\Callbacks\MarkAsProvisioned;
-use App\Jobs\DeleteServerOnProvider;
-use Illuminate\Support\Facades\Cache;
+use App\Jobs\SyncNetwork;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
-use App\Contracts\Provisionable as ProvisionableContract;
+use Illuminate\Support\Facades\Cache;
 
 class Database extends Model implements ProvisionableContract
 {

@@ -2,10 +2,10 @@
 
 namespace App;
 
-use App\Scripts\Script;
-use Facades\App\TaskFactory;
 use App\Scripts\GetAptLockStatus;
 use App\Scripts\GetCurrentDirectory;
+use App\Scripts\Script;
+use Facades\App\TaskFactory;
 
 trait Provisionable
 {
