@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Stack;
 use App\Environment;
-use Illuminate\Http\Request;
-use App\Rules\StackIsPromotable;
 use App\Http\Controllers\Controller;
+use App\Rules\StackIsPromotable;
+use App\Stack;
+use Illuminate\Http\Request;
 
 class PromotedStackController extends Controller
 {

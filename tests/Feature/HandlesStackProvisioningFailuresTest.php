@@ -2,12 +2,12 @@
 
 namespace Tests\Feature;
 
-use App\Stack;
-use Exception;
-use Tests\TestCase;
 use App\Environment;
 use App\Jobs\CreateLoadBalancerIfNecessary;
+use App\Stack;
+use Exception;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class HandlesStackProvisioningFailuresTest extends TestCase
 {

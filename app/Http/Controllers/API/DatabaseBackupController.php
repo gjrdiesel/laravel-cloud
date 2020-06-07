@@ -4,10 +4,10 @@ namespace App\Http\Controllers\API;
 
 use App\Database;
 use App\DatabaseBackup;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Validation\ValidationException;
 use App\Http\Requests\CreateDatabaseBackupRequest;
+use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 class DatabaseBackupController extends Controller
 {
