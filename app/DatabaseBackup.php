@@ -2,14 +2,14 @@
 
 namespace App;
 
-use Carbon\Carbon;
-use Illuminate\Support\Str;
+use App\Events\DatabaseBackupFailed;
+use App\Events\DatabaseBackupFinished;
+use App\Events\DatabaseBackupRunning;
 use App\Jobs\DeleteDatabaseBackup;
 use App\Jobs\RestoreDatabaseBackup;
-use App\Events\DatabaseBackupFailed;
-use App\Events\DatabaseBackupRunning;
-use App\Events\DatabaseBackupFinished;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class DatabaseBackup extends Model
 {
