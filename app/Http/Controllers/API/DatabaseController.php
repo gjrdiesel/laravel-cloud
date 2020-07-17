@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Project;
 use App\Database;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateDatabaseRequest;
+use App\Project;
+use Illuminate\Http\Request;
 
 class DatabaseController extends Controller
 {

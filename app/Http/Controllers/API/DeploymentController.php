@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Stack;
 use App\Deployment;
-use Illuminate\Http\Request;
 use App\DeploymentInstructions;
-use App\Http\Controllers\Controller;
 use App\Exceptions\AlreadyDeployingException;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateDeploymentRequest;
+use App\Stack;
+use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
 class DeploymentController extends Controller

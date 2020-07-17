@@ -3,9 +3,9 @@
 namespace Tests\Feature;
 
 use App\Task;
-use Tests\TestCase;
 use Facades\App\ShellProcessRunner;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class CallbackControllerTest extends TestCase
 {

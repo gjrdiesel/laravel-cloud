@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Project;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateProjectRequest;
+use App\Project;
+use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
 class ProjectController extends Controller

@@ -2,14 +2,14 @@
 
 namespace App\Http\Requests;
 
-use App\MemoizesMethods;
-use App\Rules\ValidSize;
-use App\Rules\ValidServeList;
-use App\Rules\ValidDatabaseName;
 use App\Contracts\StackDefinition;
-use App\Rules\ValidAppServerStack;
 use App\FiltersConfigurationArrays;
+use App\MemoizesMethods;
 use App\Rules\DatabaseIsProvisioned;
+use App\Rules\ValidAppServerStack;
+use App\Rules\ValidDatabaseName;
+use App\Rules\ValidServeList;
+use App\Rules\ValidSize;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ProvisionStackRequest extends FormRequest implements StackDefinition
@@ -114,8 +114,8 @@ class ProvisionStackRequest extends FormRequest implements StackDefinition
     public function validator()
     {
         return validator($this->all(), array_merge([
-                'name' => 'required|string|max:255|alpha_dash',
-            ],
+            'name' => 'required|string|max:255|alpha_dash',
+        ],
             $this->databaseRules(),
             $this->sourceControlRules(),
             $this->appServerRules(),

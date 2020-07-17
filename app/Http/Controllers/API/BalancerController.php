@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\API;
 
 use App\Balancer;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateBalancerRequest;
+use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
 class BalancerController extends Controller
