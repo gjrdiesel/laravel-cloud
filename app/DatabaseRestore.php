@@ -3,8 +3,8 @@
 namespace App;
 
 use App\Events\DatabaseRestoreFailed;
-use App\Events\DatabaseRestoreRunning;
 use App\Events\DatabaseRestoreFinished;
+use App\Events\DatabaseRestoreRunning;
 use Illuminate\Database\Eloquent\Model;
 
 class DatabaseRestore extends Model

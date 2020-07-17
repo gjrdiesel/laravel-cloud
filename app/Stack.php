@@ -2,17 +2,17 @@
 
 namespace App;
 
-use Exception;
-use Carbon\Carbon;
-use App\Jobs\SyncServers;
-use Illuminate\Support\Str;
+use App\Contracts\StackDefinition;
 use App\Events\StackDeleting;
 use App\Events\StackProvisioned;
 use App\Events\StackProvisioning;
-use App\Contracts\StackDefinition;
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Database\Eloquent\Model;
 use App\Exceptions\AlreadyDeployingException;
+use App\Jobs\SyncServers;
+use Carbon\Carbon;
+use Exception;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Str;
 
 class Stack extends Model
 {
