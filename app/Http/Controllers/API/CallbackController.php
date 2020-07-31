@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
+use App\Jobs\FinishTask;
 use App\Task;
 use Exception;
-use App\Jobs\FinishTask;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
 class CallbackController extends Controller
 {
