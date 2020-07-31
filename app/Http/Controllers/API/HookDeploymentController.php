@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Exceptions\AlreadyDeployingException;
 use App\Hook;
 use App\Http\Controllers\Controller;
-use App\Exceptions\AlreadyDeployingException;
 use App\Http\Requests\CreateHookDeploymentRequest;
 
 class HookDeploymentController extends Controller

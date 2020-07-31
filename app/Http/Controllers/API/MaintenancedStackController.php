@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Stack;
-use App\Jobs\SyncServers;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Jobs\SyncServers;
+use App\Stack;
+use Illuminate\Http\Request;
 
 class MaintenancedStackController extends Controller
 {

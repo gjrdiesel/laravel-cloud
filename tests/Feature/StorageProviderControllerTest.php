@@ -2,11 +2,11 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
-use App\Services\S3;
 use App\DatabaseBackup;
+use App\Services\S3;
 use App\StorageProvider;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class StorageProviderControllerTest extends TestCase
 {
