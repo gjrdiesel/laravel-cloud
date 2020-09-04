@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\API;
 
-use App\IpAddress;
-use Illuminate\Http\Request;
-use App\Scripts\AddKeyToServer;
-use App\Jobs\RemoveKeyFromServer;
 use App\Http\Controllers\Controller;
+use App\IpAddress;
+use App\Jobs\RemoveKeyFromServer;
+use App\Scripts\AddKeyToServer;
+use Illuminate\Http\Request;
 
 class KeyController extends Controller
 {

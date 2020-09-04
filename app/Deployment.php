@@ -2,18 +2,18 @@
 
 namespace App;
 
-use Carbon\Carbon;
-use App\Jobs\Build;
-use App\Jobs\Activate;
-use App\Jobs\MonitorDeployment;
-use App\Events\DeploymentFailed;
+use App\Events\DeploymentActivating;
 use App\Events\DeploymentBuilding;
+use App\Events\DeploymentCancelled;
+use App\Events\DeploymentFailed;
 use App\Events\DeploymentFinished;
 use App\Events\DeploymentTimedOut;
-use App\Events\DeploymentCancelled;
-use App\Events\DeploymentActivating;
-use Illuminate\Database\Eloquent\Model;
+use App\Jobs\Activate;
+use App\Jobs\Build;
+use App\Jobs\MonitorDeployment;
 use App\Jobs\TimeOutDeploymentIfStillRunning;
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Model;
 
 class Deployment extends Model
 {
