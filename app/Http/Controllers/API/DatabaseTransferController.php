@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\API;
 
 use App\Database;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
-use App\Http\Controllers\Controller;
 
 class DatabaseTransferController extends Controller
 {
