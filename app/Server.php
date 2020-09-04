@@ -3,9 +3,9 @@
 namespace App;
 
 use App\Callbacks\MarkAsProvisioned;
+use App\Contracts\Provisionable as ProvisionableContract;
 use App\Jobs\DeleteServerOnProvider;
 use Illuminate\Database\Eloquent\Model;
-use App\Contracts\Provisionable as ProvisionableContract;
 
 abstract class Server extends Model implements ProvisionableContract
 {

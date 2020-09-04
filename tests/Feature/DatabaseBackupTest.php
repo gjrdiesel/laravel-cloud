@@ -2,15 +2,15 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
 use App\DatabaseBackup;
-use App\Jobs\DeleteDatabaseBackup;
-use Illuminate\Support\Facades\Bus;
 use App\Events\DatabaseBackupFailed;
-use App\Events\DatabaseBackupRunning;
-use Illuminate\Support\Facades\Event;
 use App\Events\DatabaseBackupFinished;
+use App\Events\DatabaseBackupRunning;
+use App\Jobs\DeleteDatabaseBackup;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Bus;
+use Illuminate\Support\Facades\Event;
+use Tests\TestCase;
 
 class DatabaseBackupTest extends TestCase
 {
