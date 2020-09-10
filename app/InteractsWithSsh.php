@@ -3,8 +3,8 @@
 namespace App;
 
 use Facades\App\ShellProcessRunner;
-use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessTimedOutException;
+use Symfony\Component\Process\Process;
 
 trait InteractsWithSsh
 {

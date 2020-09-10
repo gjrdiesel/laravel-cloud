@@ -2,15 +2,15 @@
 
 namespace Tests\Feature;
 
-use App\Project;
 use App\Database;
 use App\IpAddress;
-use Tests\TestCase;
-use App\Jobs\ProvisionDatabase;
-use Illuminate\Support\Facades\Bus;
 use App\Jobs\DeleteServerOnProvider;
+use App\Jobs\ProvisionDatabase;
+use App\Project;
 use Facades\App\ServerProviderClientFactory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Bus;
+use Tests\TestCase;
 
 class DatabaseControllerTest extends TestCase
 {
