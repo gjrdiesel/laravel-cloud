@@ -2,9 +2,9 @@
 
 namespace App\Policies;
 
-use App\User;
 use App\Database;
 use App\DatabaseBackup;
+use App\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class DatabaseBackupPolicy

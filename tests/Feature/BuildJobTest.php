@@ -2,13 +2,13 @@
 
 namespace Tests\Feature;
 
+use App\Callbacks\CheckBuild;
 use App\Jobs\Build;
-use Tests\TestCase;
+use App\Scripts\Build as BuildScript;
 use App\ServerDeployment;
 use App\ShellProcessRunner;
-use App\Callbacks\CheckBuild;
-use App\Scripts\Build as BuildScript;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class BuildJobTest extends TestCase
 {
