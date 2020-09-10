@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
+use App\Http\Requests\ProvisionStackRequest;
 use App\Stack;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\Controller;
-use App\Http\Requests\ProvisionStackRequest;
 use Illuminate\Validation\ValidationException;
 
 class StackController extends Controller

@@ -2,15 +2,15 @@
 
 namespace App\Services;
 
+use App\Contracts\SourceProviderClient;
+use App\Deployment;
+use App\Exceptions\ManifestNotFoundException;
 use App\Hook;
+use App\SourceProvider;
 use App\Stack;
 use Exception;
-use App\Deployment;
 use GuzzleHttp\Client;
-use App\SourceProvider;
-use App\Contracts\SourceProviderClient;
 use GuzzleHttp\Exception\ClientException;
-use App\Exceptions\ManifestNotFoundException;
 
 class GitHub implements SourceProviderClient
 {

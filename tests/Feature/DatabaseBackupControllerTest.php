@@ -3,13 +3,13 @@
 namespace Tests\Feature;
 
 use App\Database;
-use Tests\TestCase;
 use App\DatabaseBackup;
-use App\StorageProvider;
-use App\Jobs\StoreDatabaseBackup;
 use App\Jobs\DeleteDatabaseBackup;
-use Illuminate\Support\Facades\Bus;
+use App\Jobs\StoreDatabaseBackup;
+use App\StorageProvider;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Bus;
+use Tests\TestCase;
 
 class DatabaseBackupControllerTest extends TestCase
 {

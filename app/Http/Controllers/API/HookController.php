@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\API;
 
 use App\Hook;
-use App\Stack;
-use Illuminate\Support\Str;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateHookRequest;
+use App\Stack;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 
 class HookController extends Controller
