@@ -2,9 +2,9 @@
 
 namespace App\Contracts;
 
+use App\Deployment;
 use App\Hook;
 use App\Stack;
-use App\Deployment;
 
 interface SourceProviderClient
 {

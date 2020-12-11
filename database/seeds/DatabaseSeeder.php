@@ -1,8 +1,8 @@
 <?php
 
-use App\User;
 use App\Project;
 use App\ServerProvider;
+use App\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder

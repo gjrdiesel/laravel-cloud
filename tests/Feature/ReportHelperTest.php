@@ -2,11 +2,11 @@
 
 namespace Tests\Feature;
 
-use Mockery;
 use Exception;
-use Tests\TestCase;
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Mockery;
+use Tests\TestCase;
 
 class ReportHelperTest extends TestCase
 {
