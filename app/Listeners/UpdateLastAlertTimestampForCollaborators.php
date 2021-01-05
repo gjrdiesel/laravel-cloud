@@ -2,9 +2,9 @@
 
 namespace App\Listeners;
 
+use App\Events\AlertCreated;
 use App\User;
 use DateTime;
-use App\Events\AlertCreated;
 
 class UpdateLastAlertTimestampForCollaborators
 {

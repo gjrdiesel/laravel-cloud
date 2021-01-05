@@ -2,8 +2,8 @@
 
 namespace App\Exceptions;
 
-use Exception;
 use App\Contracts\Provisionable;
+use Exception;
 
 class ProvisioningTimeout extends Exception
 {

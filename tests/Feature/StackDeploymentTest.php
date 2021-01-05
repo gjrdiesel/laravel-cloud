@@ -2,16 +2,16 @@
 
 namespace Tests\Feature;
 
-use App\Stack;
 use App\AppServer;
 use App\Deployment;
 use App\Jobs\Build;
-use Tests\TestCase;
-use Tests\TestCase;
 use App\Jobs\MonitorDeployment;
-use Illuminate\Support\Facades\Bus;
 use App\Jobs\TimeOutDeploymentIfStillRunning;
+use App\Stack;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Bus;
+use Tests\TestCase;
+use Tests\TestCase;
 
 class StackDeploymentTest extends TestCase
 {

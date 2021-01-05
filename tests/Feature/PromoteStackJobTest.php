@@ -2,19 +2,19 @@
 
 namespace Tests\Feature;
 
-use App\Hook;
-use App\Stack;
 use App\AppServer;
 use App\Deployment;
-use Tests\TestCase;
-use App\Jobs\StopDaemons;
-use App\ServerDeployment;
+use App\Hook;
 use App\Jobs\PromoteStack;
-use App\Jobs\StopScheduler;
 use App\Jobs\RestartDaemons;
 use App\Jobs\StartScheduler;
-use Illuminate\Support\Facades\Bus;
+use App\Jobs\StopDaemons;
+use App\Jobs\StopScheduler;
+use App\ServerDeployment;
+use App\Stack;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Bus;
+use Tests\TestCase;
 
 class PromoteStackJobTest extends TestCase
 {
