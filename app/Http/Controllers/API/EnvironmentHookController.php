@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\API;
 
 use App\Environment;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class EnvironmentHookController extends Controller
 {

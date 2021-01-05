@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Stack;
 use App\Deployment;
 use App\Http\Controllers\Controller;
+use App\Stack;
 
 class LastDeploymentController extends Controller
 {

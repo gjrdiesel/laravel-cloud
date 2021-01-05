@@ -2,12 +2,12 @@
 
 namespace Tests\Feature;
 
-use App\Database;
 use App\AppServer;
+use App\Database;
 use App\IpAddress;
-use Tests\TestCase;
 use App\ServerDeployment;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class ServerDeploymentTest extends TestCase
 {
