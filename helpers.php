@@ -1,7 +1,7 @@
 <?php
 
-use Ramsey\Uuid\UuidFactory;
 use Ramsey\Uuid\Codec\OrderedTimeCodec;
+use Ramsey\Uuid\UuidFactory;
 
 /**
  * Get a hashid.

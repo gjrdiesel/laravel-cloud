@@ -2,11 +2,11 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
 use App\DatabaseBackup;
 use App\DatabaseRestore;
 use App\Scripts\RestoreDatabaseBackup;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class RestoreDatabaseBackupScriptTest extends TestCase
 {
