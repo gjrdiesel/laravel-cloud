@@ -3,8 +3,8 @@
 namespace App;
 
 use App\Jobs\PromoteStack;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class Environment extends Model
 {

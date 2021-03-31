@@ -2,8 +2,8 @@
 
 namespace App\Callbacks;
 
-use App\Task;
 use App\DatabaseRestore;
+use App\Task;
 
 class CheckDatabaseRestore
 {
