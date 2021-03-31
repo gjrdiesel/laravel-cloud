@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests;
 
-use App\SourceProvider;
 use App\Rules\ValidRepository;
-use Illuminate\Validation\Rule;
+use App\SourceProvider;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class CreateProjectRequest extends FormRequest
 {

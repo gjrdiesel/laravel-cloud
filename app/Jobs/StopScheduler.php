@@ -2,13 +2,13 @@
 
 namespace App\Jobs;
 
+use App\Scripts\StopScheduler as StopSchedulerScript;
 use App\ServerDeployment;
 use Illuminate\Bus\Queueable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use App\Scripts\StopScheduler as StopSchedulerScript;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class StopScheduler implements ShouldQueue
 {
