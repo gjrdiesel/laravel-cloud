@@ -2,9 +2,9 @@
 
 namespace App\Scripts;
 
-use App\Stack;
 use App\Balancer;
 use App\CaddyBalancerConfiguration;
+use App\Stack;
 
 class SyncBalancer extends Script
 {

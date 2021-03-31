@@ -2,8 +2,8 @@
 
 namespace App;
 
-use InvalidArgumentException;
 use App\Services\DigitalOcean;
+use InvalidArgumentException;
 
 class ServerProviderClientFactory
 {
