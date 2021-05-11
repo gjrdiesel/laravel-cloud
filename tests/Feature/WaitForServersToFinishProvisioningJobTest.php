@@ -2,13 +2,13 @@
 
 namespace Tests\Feature;
 
-use App\Stack;
-use App\Balancer;
 use App\AppServer;
-use Carbon\Carbon;
-use Tests\TestCase;
+use App\Balancer;
 use App\Jobs\WaitForServersToFinishProvisioning;
+use App\Stack;
+use Carbon\Carbon;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class WaitForServersToFinishProvisioningJobTest extends TestCase
 {

@@ -2,14 +2,14 @@
 
 namespace App\Jobs;
 
+use App\Contracts\Provisionable;
+use App\Scripts\RemoveKeyFromServer as RemoveKeyFromServerScript;
 use App\User;
 use Illuminate\Bus\Queueable;
-use App\Contracts\Provisionable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use App\Scripts\RemoveKeyFromServer as RemoveKeyFromServerScript;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class RemoveKeyFromServer implements ShouldQueue
 {

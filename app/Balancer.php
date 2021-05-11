@@ -2,16 +2,16 @@
 
 namespace App;
 
-use Carbon\Carbon;
-use App\Jobs\SyncBalancer;
 use App\Callbacks\Dispatch;
-use App\Jobs\ProvisionBalancer;
-use App\Jobs\UpdateStackDnsRecords;
 use App\Callbacks\MarkAsProvisioned;
-use App\Jobs\DeleteServerOnProvider;
-use Illuminate\Database\Eloquent\Model;
-use App\Scripts\SyncBalancer as SyncBalancerScript;
 use App\Contracts\Provisionable as ProvisionableContract;
+use App\Jobs\DeleteServerOnProvider;
+use App\Jobs\ProvisionBalancer;
+use App\Jobs\SyncBalancer;
+use App\Jobs\UpdateStackDnsRecords;
+use App\Scripts\SyncBalancer as SyncBalancerScript;
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Model;
 
 class Balancer extends Model implements ProvisionableContract
 {

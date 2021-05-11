@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Stack;
 use App\Http\Controllers\Controller;
+use App\Stack;
 
 class ServerConfigurationController extends Controller
 {
