@@ -2,16 +2,16 @@
 
 namespace App\Jobs;
 
-use Exception;
-use App\ServerDeployment;
 use App\Callbacks\CheckBuild;
-use Illuminate\Bus\Queueable;
-use Illuminate\Bus\Queueable;
 use App\Scripts\Build as BuildScript;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
+use App\ServerDeployment;
+use Exception;
+use Illuminate\Bus\Queueable;
+use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class Build implements ShouldQueue
 {

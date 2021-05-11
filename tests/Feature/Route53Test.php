@@ -2,12 +2,12 @@
 
 namespace Tests\Feature;
 
-use App\Stack;
 use App\Balancer;
 use App\IpAddress;
-use Tests\TestCase;
 use App\Services\Route53;
+use App\Stack;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class Route53Test extends TestCase
 {

@@ -2,8 +2,8 @@
 
 namespace App\Contracts;
 
-use App\User;
 use App\Scripts\Script;
+use App\User;
 
 interface Provisionable
 {
