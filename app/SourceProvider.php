@@ -2,8 +2,8 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
 use Facades\App\SourceProviderClientFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class SourceProvider extends Model
 {

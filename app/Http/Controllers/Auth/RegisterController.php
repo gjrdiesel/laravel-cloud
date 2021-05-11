@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
-use App\SecureShellKey;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Validator;
+use App\SecureShellKey;
+use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
