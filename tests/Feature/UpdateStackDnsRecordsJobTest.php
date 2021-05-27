@@ -2,13 +2,13 @@
 
 namespace Tests\Feature;
 
-use Mockery;
-use App\Stack;
-use Tests\TestCase;
-use App\Environment;
 use App\Contracts\DnsProvider;
+use App\Environment;
 use App\Jobs\UpdateStackDnsRecords;
+use App\Stack;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Mockery;
+use Tests\TestCase;
 
 class UpdateStackDnsRecordsJobTest extends TestCase
 {

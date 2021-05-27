@@ -2,10 +2,10 @@
 
 namespace App;
 
-use App\Scripts\RunServerTask;
-use App\Events\ServerTaskFailed;
 use App\Callbacks\CheckServerTask;
+use App\Events\ServerTaskFailed;
 use App\Events\ServerTaskFinished;
+use App\Scripts\RunServerTask;
 use Illuminate\Database\Eloquent\Model;
 
 class ServerTask extends Model

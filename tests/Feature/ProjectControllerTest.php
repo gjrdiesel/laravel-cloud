@@ -2,18 +2,18 @@
 
 namespace Tests\Feature;
 
-use App\Stack;
-use App\Project;
+use App\AppServer;
 use App\Balancer;
 use App\Database;
-use App\AppServer;
-use Tests\TestCase;
+use App\Jobs\ProvisionDatabase;
+use App\Project;
 use App\ServerProvider;
 use App\SourceProvider;
-use App\Jobs\ProvisionDatabase;
-use Illuminate\Support\Facades\Bus;
+use App\Stack;
 use Facades\App\ServerProviderClientFactory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Bus;
+use Tests\TestCase;
 
 class ProjectControllerTest extends TestCase
 {

@@ -2,15 +2,15 @@
 
 namespace Tests\Feature;
 
-use App\Stack;
 use App\AppServer;
-use Carbon\Carbon;
-use Tests\TestCase;
-use App\Jobs\ProvisionServers;
 use App\Jobs\ProvisionAppServer;
-use Illuminate\Support\Facades\Bus;
+use App\Jobs\ProvisionServers;
+use App\Stack;
+use Carbon\Carbon;
 use Facades\App\ServerProviderClientFactory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Bus;
+use Tests\TestCase;
 
 class ProvisionServersJobTest extends TestCase
 {
