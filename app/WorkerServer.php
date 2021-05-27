@@ -2,9 +2,9 @@
 
 namespace App;
 
+use App\Jobs\ProvisionWorkerServer;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
-use App\Jobs\ProvisionWorkerServer;
 
 class WorkerServer extends Server
 {

@@ -3,10 +3,10 @@
 namespace Tests\Feature;
 
 use App\Project;
-use Tests\TestCase;
-use App\SourceProvider;
 use App\Services\GitHub;
+use App\SourceProvider;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class SourceControllerTest extends TestCase
 {

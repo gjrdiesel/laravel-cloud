@@ -2,12 +2,12 @@
 
 namespace Tests\Feature;
 
-use App\Stack;
 use App\Database;
-use Tests\TestCase;
 use App\Jobs\SyncNetwork;
-use Illuminate\Support\Facades\Bus;
+use App\Stack;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Bus;
+use Tests\TestCase;
 
 class StackDatabaseControllerTest extends TestCase
 {
