@@ -2,8 +2,8 @@
 
 namespace App;
 
-use Facades\App\Contracts\YamlParser;
 use App\Http\Requests\CreateDeploymentRequest;
+use Facades\App\Contracts\YamlParser;
 
 class DeploymentInstructions
 {
