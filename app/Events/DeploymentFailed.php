@@ -2,13 +2,12 @@
 
 namespace App\Events;
 
-use Exception;
-use App\Deployment;
-use App\Contracts\HasStack;
 use App\Contracts\Alertable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Foundation\Events\Dispatchable;
+use App\Contracts\HasStack;
+use App\Deployment;
 use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Queue\SerializesModels;
 
 class DeploymentFailed implements Alertable, HasStack
 {

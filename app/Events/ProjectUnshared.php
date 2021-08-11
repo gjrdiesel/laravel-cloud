@@ -2,11 +2,11 @@
 
 namespace App\Events;
 
-use App\User;
 use App\Project;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Foundation\Events\Dispatchable;
+use App\User;
 use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Queue\SerializesModels;
 
 class ProjectUnshared
 {

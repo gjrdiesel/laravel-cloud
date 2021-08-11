@@ -2,10 +2,10 @@
 
 namespace App\Services;
 
-use App\Stack;
-use Exception;
 use App\Contracts\DnsProvider;
+use App\Stack;
 use Aws\Route53\Route53Client;
+use Exception;
 
 class Route53 implements DnsProvider
 {
