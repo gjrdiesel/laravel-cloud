@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests;
 
+use App\FiltersConfigurationArrays;
 use App\MemoizesMethods;
 use App\Rules\ValidBranch;
 use App\Rules\ValidCommit;
-use App\FiltersConfigurationArrays;
 use Illuminate\Foundation\Http\FormRequest;
 
 class CreateDeploymentRequest extends FormRequest

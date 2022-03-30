@@ -16,8 +16,7 @@ class Dispatch
     /**
      * Create a new callback instance.
      *
-     * @param string $class
-     *
+     * @param  string  $class
      * @return void
      */
     public function __construct($class)
@@ -28,8 +27,7 @@ class Dispatch
     /**
      * Handle the callback.
      *
-     * @param Task $task
-     *
+     * @param  Task  $task
      * @return void
      */
     public function handle(Task $task)

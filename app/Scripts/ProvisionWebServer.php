@@ -18,8 +18,7 @@ class ProvisionWebServer extends ProvisioningScript
     /**
      * Create a new script instance.
      *
-     * @param \App\WebServer $server
-     *
+     * @param  \App\WebServer  $server
      * @return void
      */
     public function __construct(WebServer $server)

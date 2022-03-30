@@ -10,9 +10,8 @@ class ShellProcessRunner
     /**
      * Run the given process and return it.
      *
-     * @param \Symfony\Component\Process\Process $process
-     * @param mixed                              $output
-     *
+     * @param  \Symfony\Component\Process\Process  $process
+     * @param  mixed  $output
      * @return ShellResponse
      */
     public function run($process)
@@ -31,8 +30,7 @@ class ShellProcessRunner
     /**
      * Mock the responses for the process runner.
      *
-     * @param array $responses
-     *
+     * @param  array  $responses
      * @return void
      */
     public static function mock(array $responses)

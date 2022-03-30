@@ -28,8 +28,7 @@ interface ServerProviderClient
     /**
      * Get the size of the server in megabytes.
      *
-     * @param string $size
-     *
+     * @param  string  $size
      * @return int
      */
     public function sizeInMegabytes($size);
@@ -37,8 +36,7 @@ interface ServerProviderClient
     /**
      * Get the recommended balancer size for a given server size.
      *
-     * @param string $size
-     *
+     * @param  string  $size
      * @return string
      */
     public function recommendedBalancerSize($size);
@@ -46,10 +44,9 @@ interface ServerProviderClient
     /**
      * Create a new server.
      *
-     * @param string $name
-     * @param string $size
-     * @param string $region
-     *
+     * @param  string  $name
+     * @param  string  $size
+     * @param  string  $region
      * @return string
      */
     public function createServer($name, $size, $region);
@@ -57,8 +54,7 @@ interface ServerProviderClient
     /**
      * Get the public IP address for a server by ID.
      *
-     * @param \App\Contracts\Provisionable $server
-     *
+     * @param  \App\Contracts\Provisionable  $server
      * @return string|null
      */
     public function getPublicIpAddress(Provisionable $server);
@@ -66,8 +62,7 @@ interface ServerProviderClient
     /**
      * Get the private IP address for a server by ID.
      *
-     * @param \App\Contracts\Provisionable $server
-     *
+     * @param  \App\Contracts\Provisionable  $server
      * @return string|null
      */
     public function getPrivateIpAddress(Provisionable $server);
@@ -75,8 +70,7 @@ interface ServerProviderClient
     /**
      * Delete the given server.
      *
-     * @param \App\Contracts\Provisionable $server
-     *
+     * @param  \App\Contracts\Provisionable  $server
      * @return void
      */
     public function deleteServer(Provisionable $server);
@@ -84,8 +78,7 @@ interface ServerProviderClient
     /**
      * Delete the given server by ID.
      *
-     * @param string $providerServerId
-     *
+     * @param  string  $providerServerId
      * @return void
      */
     public function deleteServerById($providerServerId);

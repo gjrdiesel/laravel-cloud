@@ -2,11 +2,11 @@
 
 namespace App\Events;
 
-use App\Stack;
 use App\Contracts\Alertable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Foundation\Events\Dispatchable;
+use App\Stack;
 use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Queue\SerializesModels;
 
 class StackDeleting implements Alertable
 {
@@ -22,8 +22,7 @@ class StackDeleting implements Alertable
     /**
      * Create a new event instance.
      *
-     * @param \App\Stack $stack
-     *
+     * @param  \App\Stack  $stack
      * @return void
      */
     public function __construct(Stack $stack)
