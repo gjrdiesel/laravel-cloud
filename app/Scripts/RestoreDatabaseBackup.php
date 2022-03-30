@@ -23,8 +23,7 @@ class RestoreDatabaseBackup extends Script
     /**
      * Create a new script instance.
      *
-     * @param \App\DatabaseRestore $restore
-     *
+     * @param  \App\DatabaseRestore  $restore
      * @return void
      */
     public function __construct(DatabaseRestore $restore)

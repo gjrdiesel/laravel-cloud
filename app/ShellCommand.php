@@ -16,8 +16,7 @@ class ShellCommand
     /**
      * Create a new shell command instance.
      *
-     * @param string $command
-     *
+     * @param  string  $command
      * @return void
      */
     public function __construct($command)
@@ -28,8 +27,7 @@ class ShellCommand
     /**
      * Determine if the given server can run the build command.
      *
-     * @param \App\Server $server
-     *
+     * @param  \App\Server  $server
      * @return bool
      */
     public function appliesTo($server)
@@ -40,8 +38,7 @@ class ShellCommand
     /**
      * Determine if the command is prefixed with the given false.
      *
-     * @param string $prefix
-     *
+     * @param  string  $prefix
      * @return bool
      */
     public function prefixed($prefix)

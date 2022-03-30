@@ -86,9 +86,8 @@ class Hook extends Model
     /**
      * Determine if the given hook payload is a test.
      *
-     * @param \App\Hook $hook
-     * @param array     $payload
-     *
+     * @param  \App\Hook  $hook
+     * @param  array  $payload
      * @return bool
      */
     public function isTest(array $payload)
@@ -101,8 +100,7 @@ class Hook extends Model
     /**
      * Determine if this hook responds to the given source provider event payload.
      *
-     * @param arary $payload
-     *
+     * @param  arary  $payload
      * @return bool
      */
     public function receives(array $payload)
@@ -125,9 +123,9 @@ class Hook extends Model
     /**
      * Delete the model from the database.
      *
-     * @throws \Exception
-     *
      * @return bool|null
+     *
+     * @throws \Exception
      */
     public function delete()
     {

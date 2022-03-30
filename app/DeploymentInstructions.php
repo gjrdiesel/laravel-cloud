@@ -2,8 +2,8 @@
 
 namespace App;
 
-use Facades\App\Contracts\YamlParser;
 use App\Http\Requests\CreateDeploymentRequest;
+use Facades\App\Contracts\YamlParser;
 
 class DeploymentInstructions
 {
@@ -54,13 +54,12 @@ class DeploymentInstructions
     /**
      * Create a new deployment instructions instance.
      *
-     * @param string $hash
-     * @param array  $build
-     * @param array  $activate
-     * @param array  $directories
-     * @param array  $daemons
-     * @param array  $schedule
-     *
+     * @param  string  $hash
+     * @param  array  $build
+     * @param  array  $activate
+     * @param  array  $directories
+     * @param  array  $daemons
+     * @param  array  $schedule
      * @return void
      */
     public function __construct($hash, array $build, array $activate,
@@ -79,8 +78,7 @@ class DeploymentInstructions
     /**
      * Create new deployment instructions from a request.
      *
-     * @param \App\Http\Requests\CreateDeploymentRequest $request
-     *
+     * @param  \App\Http\Requests\CreateDeploymentRequest  $request
      * @return static
      */
     public static function fromRequest(CreateDeploymentRequest $request)
@@ -101,9 +99,8 @@ class DeploymentInstructions
     /**
      * Create new deployment instructions from the given hook and hash.
      *
-     * @param \App\Hook   $hook
-     * @param string|null $hash
-     *
+     * @param  \App\Hook  $hook
+     * @param  string|null  $hash
      * @return static
      */
     public static function fromHookCommit(Hook $hook, $hash)
@@ -124,8 +121,7 @@ class DeploymentInstructions
     /**
      * Create new deployment instructions from the given hook.
      *
-     * @param \App\Hook $hook
-     *
+     * @param  \App\Hook  $hook
      * @return static
      */
     public static function forLatestHookCommit(Hook $hook)
@@ -140,8 +136,7 @@ class DeploymentInstructions
     /**
      * Extract the daemons from the given manifest array.
      *
-     * @param array $manifest
-     *
+     * @param  array  $manifest
      * @return array
      */
     public static function daemons(array $manifest)
@@ -158,8 +153,7 @@ class DeploymentInstructions
     /**
      * Extract the scheduled tasks from the given manifest array.
      *
-     * @param array $manifest
-     *
+     * @param  array  $manifest
      * @return array
      */
     public static function schedule(array $manifest)

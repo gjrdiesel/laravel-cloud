@@ -2,13 +2,13 @@
 
 namespace App\Jobs;
 
+use App\Contracts\DnsProvider;
 use App\Stack;
 use Illuminate\Bus\Queueable;
-use App\Contracts\DnsProvider;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class AddDnsRecord implements ShouldQueue
 {
@@ -24,8 +24,7 @@ class AddDnsRecord implements ShouldQueue
     /**
      * Create a new job instance.
      *
-     * @param \App\Stack $stack
-     *
+     * @param  \App\Stack  $stack
      * @return void
      */
     public function __construct(Stack $stack)
@@ -36,8 +35,7 @@ class AddDnsRecord implements ShouldQueue
     /**
      * Execute the job.
      *
-     * @param \App\Contracts\DnsProvider $dns
-     *
+     * @param  \App\Contracts\DnsProvider  $dns
      * @return void
      */
     public function handle(DnsProvider $dns)

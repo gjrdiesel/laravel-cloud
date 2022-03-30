@@ -37,11 +37,10 @@ class CaddyBalancerConfiguration
     /**
      * Create a new Caddy configuration instance.
      *
-     * @param \App\Balancer $balancer
-     * @param \App\Stack    $balancer
-     * @param string        $domain
-     * @param array         $proxyTo
-     *
+     * @param  \App\Balancer  $balancer
+     * @param  \App\Stack  $balancer
+     * @param  string  $domain
+     * @param  array  $proxyTo
      * @return void
      */
     public function __construct(Balancer $balancer, Stack $stack, $domain, array $proxyTo)

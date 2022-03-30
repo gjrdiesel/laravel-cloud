@@ -2,8 +2,8 @@
 
 namespace App\Http\Requests;
 
-use App\MemoizesMethods;
 use App\DeploymentInstructions;
+use App\MemoizesMethods;
 use Illuminate\Foundation\Http\FormRequest;
 
 class CreateHookDeploymentRequest extends FormRequest

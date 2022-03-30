@@ -16,8 +16,7 @@ class ProvisionWorkerServer extends ProvisioningScript
     /**
      * Create a new script instance.
      *
-     * @param \App\WorkerServer $server
-     *
+     * @param  \App\WorkerServer  $server
      * @return void
      */
     public function __construct(WorkerServer $server)

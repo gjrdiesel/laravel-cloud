@@ -2,14 +2,14 @@
 
 namespace App;
 
-use Carbon\Carbon;
-use Illuminate\Support\Str;
+use App\Events\DatabaseBackupFailed;
+use App\Events\DatabaseBackupFinished;
+use App\Events\DatabaseBackupRunning;
 use App\Jobs\DeleteDatabaseBackup;
 use App\Jobs\RestoreDatabaseBackup;
-use App\Events\DatabaseBackupFailed;
-use App\Events\DatabaseBackupRunning;
-use App\Events\DatabaseBackupFinished;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class DatabaseBackup extends Model
 {
@@ -56,8 +56,7 @@ class DatabaseBackup extends Model
     /**
      * Generate a new backup path for the given project.
      *
-     * @param \App\Project $project
-     *
+     * @param  \App\Project  $project
      * @return string
      */
     public static function newPathFor(Project $project)
@@ -126,8 +125,7 @@ class DatabaseBackup extends Model
     /**
      * Mark the database backup as finished.
      *
-     * @param string $output
-     *
+     * @param  string  $output
      * @return void
      */
     public function markAsFinished($output = '')
@@ -175,9 +173,8 @@ class DatabaseBackup extends Model
     /**
      * Mark the database backup as failed.
      *
-     * @param int    $exitCode
-     * @param string $output
-     *
+     * @param  int  $exitCode
+     * @param  string  $output
      * @return void
      */
     public function markAsFailed($exitCode, $output = '')
@@ -192,9 +189,9 @@ class DatabaseBackup extends Model
     /**
      * Delete the model from the database.
      *
-     * @throws \Exception
-     *
      * @return bool|null
+     *
+     * @throws \Exception
      */
     public function delete()
     {
