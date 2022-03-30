@@ -16,8 +16,7 @@ class ProvisioningScript extends Script
     /**
      * Create a new script instance.
      *
-     * @param \App\Contracts\Provisionable $provisionable
-     *
+     * @param  \App\Contracts\Provisionable  $provisionable
      * @return void
      */
     public function __construct(Provisionable $provisionable)

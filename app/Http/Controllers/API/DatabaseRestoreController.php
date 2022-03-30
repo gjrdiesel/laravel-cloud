@@ -5,8 +5,8 @@ namespace App\Http\Controllers\API;
 use App\Database;
 use App\DatabaseBackup;
 use App\DatabaseRestore;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
 class DatabaseRestoreController extends Controller
@@ -14,9 +14,8 @@ class DatabaseRestoreController extends Controller
     /**
      * Get all of the backups for the given database.
      *
-     * @param Request       $request
-     * @param \App\Database $database
-     *
+     * @param  Request  $request
+     * @param  \App\Database  $database
      * @return Response
      */
     public function index(Request $request, Database $database)
@@ -39,9 +38,8 @@ class DatabaseRestoreController extends Controller
     /**
      * Restore the database from the given backup.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\DatabaseBackup      $backup
-     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\DatabaseBackup  $backup
      * @return Response
      */
     public function store(Request $request, DatabaseBackup $backup)

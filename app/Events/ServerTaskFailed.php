@@ -3,9 +3,9 @@
 namespace App\Events;
 
 use App\ServerTask;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Queue\SerializesModels;
 
 class ServerTaskFailed
 {
@@ -21,8 +21,7 @@ class ServerTaskFailed
     /**
      * Create a new event instance.
      *
-     * @param \App\ServerTask $task
-     *
+     * @param  \App\ServerTask  $task
      * @return void
      */
     public function __construct(ServerTask $task)

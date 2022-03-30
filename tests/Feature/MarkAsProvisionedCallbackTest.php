@@ -2,11 +2,11 @@
 
 namespace Tests\Feature;
 
-use App\Task;
-use App\Database;
-use Tests\TestCase;
 use App\Callbacks\MarkAsProvisioned;
+use App\Database;
+use App\Task;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class MarkAsProvisionedCallbackTest extends TestCase
 {

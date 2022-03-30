@@ -21,8 +21,7 @@ class DatabaseProvisioned extends Mailable
     /**
      * Create a new message instance.
      *
-     * @param \App\Database $database
-     *
+     * @param  \App\Database  $database
      * @return void
      */
     public function __construct(Database $database)
