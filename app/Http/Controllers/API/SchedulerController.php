@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use App\Stack;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Illuminate\Validation\ValidationException;
 
 class SchedulerController extends Controller
@@ -12,9 +12,8 @@ class SchedulerController extends Controller
     /**
      * Install the scheduler for the stack.
      *
-     * @param Request    $request
-     * @param \App\Stack $stack
-     *
+     * @param  Request  $request
+     * @param  \App\Stack  $stack
      * @return mixed
      */
     public function store(Request $request, Stack $stack)
@@ -35,9 +34,8 @@ class SchedulerController extends Controller
     /**
      * Remove the scheduler for the stack.
      *
-     * @param Request    $request
-     * @param \App\Stack $stack
-     *
+     * @param  Request  $request
+     * @param  \App\Stack  $stack
      * @return mixed
      */
     public function destroy(Request $request, Stack $stack)

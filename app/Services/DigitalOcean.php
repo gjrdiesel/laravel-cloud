@@ -2,12 +2,12 @@
 
 namespace App\Services;
 
-use Exception;
-use GuzzleHttp\Client;
-use App\ServerProvider;
-use InvalidArgumentException;
 use App\Contracts\Provisionable;
 use App\Contracts\ServerProviderClient;
+use App\ServerProvider;
+use Exception;
+use GuzzleHttp\Client;
+use InvalidArgumentException;
 
 class DigitalOcean implements ServerProviderClient
 {
@@ -21,8 +21,7 @@ class DigitalOcean implements ServerProviderClient
     /**
      * Create a new DigitalOcean service instance.
      *
-     * @param \App\ServerProvider $provider
-     *
+     * @param  \App\ServerProvider  $provider
      * @return void
      */
     public function __construct(ServerProvider $provider)
@@ -94,8 +93,7 @@ class DigitalOcean implements ServerProviderClient
     /**
      * Get the size of the server in megabytes.
      *
-     * @param string $size
-     *
+     * @param  string  $size
      * @return int
      */
     public function sizeInMegabytes($size)
@@ -131,8 +129,7 @@ class DigitalOcean implements ServerProviderClient
     /**
      * Get the recommended balancer size for a given server size.
      *
-     * @param string $size
-     *
+     * @param  string  $size
      * @return string
      */
     public function recommendedBalancerSize($size)
@@ -162,10 +159,9 @@ class DigitalOcean implements ServerProviderClient
     /**
      * Create a new server.
      *
-     * @param string $name
-     * @param string $size
-     * @param string $region
-     *
+     * @param  string  $name
+     * @param  string  $size
+     * @param  string  $region
      * @return string
      */
     public function createServer($name, $size, $region)
@@ -244,8 +240,7 @@ class DigitalOcean implements ServerProviderClient
     /**
      * Get the public IP address for a server by ID.
      *
-     * @param \App\Contracts\Provisionable $server
-     *
+     * @param  \App\Contracts\Provisionable  $server
      * @return string|null
      */
     public function getPublicIpAddress(Provisionable $server)
@@ -256,8 +251,7 @@ class DigitalOcean implements ServerProviderClient
     /**
      * Get the private IP address for a server by ID.
      *
-     * @param \App\Contracts\Provisionable $server
-     *
+     * @param  \App\Contracts\Provisionable  $server
      * @return string|null
      */
     public function getPrivateIpAddress(Provisionable $server)
@@ -268,8 +262,7 @@ class DigitalOcean implements ServerProviderClient
     /**
      * Delete the given server.
      *
-     * @param \App\Contracts\Provisionable $server
-     *
+     * @param  \App\Contracts\Provisionable  $server
      * @return void
      */
     public function deleteServer(Provisionable $server)
@@ -280,8 +273,7 @@ class DigitalOcean implements ServerProviderClient
     /**
      * Delete the given server.
      *
-     * @param string $providerServerId
-     *
+     * @param  string  $providerServerId
      * @return void
      */
     public function deleteServerById($providerServerId)
@@ -292,9 +284,8 @@ class DigitalOcean implements ServerProviderClient
     /**
      * Get an IP address for the server.
      *
-     * @param \App\Contracts\Provisionable $server
-     * @param string                       $type
-     *
+     * @param  \App\Contracts\Provisionable  $server
+     * @param  string  $type
      * @return string|null
      */
     protected function getIpAddress(Provisionable $server, $type = 'public')
@@ -311,10 +302,9 @@ class DigitalOcean implements ServerProviderClient
     /**
      * Make an HTTP request to DigitalOcean.
      *
-     * @param string $method
-     * @param string $path
-     * @param array  $parameters
-     *
+     * @param  string  $method
+     * @param  string  $path
+     * @param  array  $parameters
      * @return array
      */
     protected function request($method, $path, array $parameters = [])
@@ -333,11 +323,10 @@ class DigitalOcean implements ServerProviderClient
     /**
      * Aggregate pages of results into a single result array.
      *
-     * @param string $method
-     * @param string $path
-     * @param array  $target
-     * @param array  $parameters
-     *
+     * @param  string  $method
+     * @param  string  $path
+     * @param  array  $target
+     * @param  array  $parameters
      * @return array
      */
     protected function aggregate($method, $path, $target, array $parameters = [])

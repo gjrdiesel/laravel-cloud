@@ -28,10 +28,9 @@ class ShellResponse
     /**
      * Create a new response instance.
      *
-     * @param int    $exitCode
-     * @param string $output
-     * @param bool   $timedOut
-     *
+     * @param  int  $exitCode
+     * @param  string  $output
+     * @param  bool  $timedOut
      * @return void
      */
     public function __construct($exitCode, $output, $timedOut = false)

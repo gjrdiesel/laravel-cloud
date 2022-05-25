@@ -2,16 +2,15 @@
 
 namespace App;
 
-use Carbon\Carbon;
 use App\Jobs\ProvisionAppServer;
+use Carbon\Carbon;
 
 class AppServer extends HttpServer
 {
     /**
      * Determine if this server will run a given deployment command.
      *
-     * @param string $command
-     *
+     * @param  string  $command
      * @return bool
      */
     public function runsCommand($command)

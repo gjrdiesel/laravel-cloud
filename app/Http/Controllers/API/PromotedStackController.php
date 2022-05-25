@@ -2,20 +2,19 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Stack;
 use App\Environment;
-use Illuminate\Http\Request;
-use App\Rules\StackIsPromotable;
 use App\Http\Controllers\Controller;
+use App\Rules\StackIsPromotable;
+use App\Stack;
+use Illuminate\Http\Request;
 
 class PromotedStackController extends Controller
 {
     /**
      * Get the promoted stack for the environment.
      *
-     * @param Request          $request
-     * @param \App\Environment $environment
-     *
+     * @param  Request  $request
+     * @param  \App\Environment  $environment
      * @return mixed
      */
     public function show(Request $request, Environment $environment)
@@ -32,9 +31,8 @@ class PromotedStackController extends Controller
     /**
      * Set the promoted stack for the environment.
      *
-     * @param Request          $request
-     * @param \App\Environment $environment
-     *
+     * @param  Request  $request
+     * @param  \App\Environment  $environment
      * @return mixed
      */
     public function update(Request $request, Environment $environment)

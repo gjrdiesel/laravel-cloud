@@ -1,13 +1,12 @@
 <?php
 
-use Ramsey\Uuid\UuidFactory;
 use Ramsey\Uuid\Codec\OrderedTimeCodec;
+use Ramsey\Uuid\UuidFactory;
 
 /**
  * Get a hashid.
  *
- * @param int $value
- *
+ * @param  int  $value
  * @return string
  */
 function hashid_encode($value)
@@ -20,8 +19,7 @@ function hashid_encode($value)
 /**
  * Decode a hashid.
  *
- * @param string $value
- *
+ * @param  string  $value
  * @return int
  */
 function hashid_decode($value)

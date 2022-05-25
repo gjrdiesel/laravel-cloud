@@ -2,8 +2,8 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
 use Facades\App\ServerProviderClientFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class ServerProvider extends Model
 {
@@ -43,8 +43,7 @@ class ServerProvider extends Model
     /**
      * Determine if the given region is valid for this provider.
      *
-     * @param string $region
-     *
+     * @param  string  $region
      * @return bool
      */
     public function validRegion($region)
@@ -55,8 +54,7 @@ class ServerProvider extends Model
     /**
      * Determine if the given size is valid for this provider.
      *
-     * @param string $size
-     *
+     * @param  string  $size
      * @return bool
      */
     public function validSize($size)

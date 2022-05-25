@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Stack;
-use App\Jobs\SyncServers;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Jobs\SyncServers;
+use App\Stack;
+use Illuminate\Http\Request;
 
 class MaintenancedStackController extends Controller
 {
     /**
      * Place a stack under maintenance.
      *
-     * @param Request $request
-     *
+     * @param  Request  $request
      * @return mixed
      */
     public function store(Request $request)
@@ -32,8 +31,7 @@ class MaintenancedStackController extends Controller
     /**
      * Remove the given stack from maintenance mode.
      *
-     * @param \App\Stack $stack
-     *
+     * @param  \App\Stack  $stack
      * @return Response
      */
     public function destroy(Stack $stack)

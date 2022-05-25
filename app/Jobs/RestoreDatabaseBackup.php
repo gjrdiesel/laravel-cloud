@@ -2,14 +2,14 @@
 
 namespace App\Jobs;
 
-use App\DatabaseRestore;
-use Illuminate\Bus\Queueable;
-use Illuminate\Queue\SerializesModels;
 use App\Callbacks\CheckDatabaseRestore;
-use Illuminate\Queue\InteractsWithQueue;
+use App\DatabaseRestore;
+use App\Scripts\RestoreDatabaseBackup as RestoreDatabaseBackupScript;
+use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use App\Scripts\RestoreDatabaseBackup as RestoreDatabaseBackupScript;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class RestoreDatabaseBackup implements ShouldQueue
 {
@@ -25,8 +25,7 @@ class RestoreDatabaseBackup implements ShouldQueue
     /**
      * Create a new job instance.
      *
-     * @param \App\DatabaseRestore $restore
-     *
+     * @param  \App\DatabaseRestore  $restore
      * @return void
      */
     public function __construct(DatabaseRestore $restore)
