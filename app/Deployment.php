@@ -2,18 +2,18 @@
 
 namespace App;
 
-use Carbon\Carbon;
-use App\Jobs\Build;
-use App\Jobs\Activate;
-use App\Jobs\MonitorDeployment;
-use App\Events\DeploymentFailed;
+use App\Events\DeploymentActivating;
 use App\Events\DeploymentBuilding;
+use App\Events\DeploymentCancelled;
+use App\Events\DeploymentFailed;
 use App\Events\DeploymentFinished;
 use App\Events\DeploymentTimedOut;
-use App\Events\DeploymentCancelled;
-use App\Events\DeploymentActivating;
-use Illuminate\Database\Eloquent\Model;
+use App\Jobs\Activate;
+use App\Jobs\Build;
+use App\Jobs\MonitorDeployment;
 use App\Jobs\TimeOutDeploymentIfStillRunning;
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Model;
 
 class Deployment extends Model
 {
@@ -224,8 +224,7 @@ class Deployment extends Model
     /**
      * Get the build commands for the given server.
      *
-     * @param \App\Server $server
-     *
+     * @param  \App\Server  $server
      * @return \Illuminate\Support\Collection
      */
     protected function buildCommandsFor($server)
@@ -248,8 +247,7 @@ class Deployment extends Model
     /**
      * Get the activation commands for the given server.
      *
-     * @param \App\Server $server
-     *
+     * @param  \App\Server  $server
      * @return \Illuminate\Support\Collection
      */
     protected function activationCommandsFor($server)
@@ -364,8 +362,7 @@ class Deployment extends Model
     /**
      * Mark the deployment as failed.
      *
-     * @param \Exception|null $exception
-     *
+     * @param  \Exception|null  $exception
      * @return void
      */
     public function markAsFailed($exception = null)

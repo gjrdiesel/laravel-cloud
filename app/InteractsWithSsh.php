@@ -3,8 +3,8 @@
 namespace App;
 
 use Facades\App\ShellProcessRunner;
-use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessTimedOutException;
+use Symfony\Component\Process\Process;
 
 trait InteractsWithSsh
 {
@@ -35,8 +35,7 @@ trait InteractsWithSsh
     /**
      * Update the model for the given SSH response.
      *
-     * @param object $response
-     *
+     * @param  object  $response
      * @return $this
      */
     protected function updateForResponse($response)
@@ -142,8 +141,7 @@ trait InteractsWithSsh
     /**
      * Download the output of the task from the remote server.
      *
-     * @param string|null $path
-     *
+     * @param  string|null  $path
      * @return string
      */
     public function retrieveOutput($path = null)
@@ -154,9 +152,8 @@ trait InteractsWithSsh
     /**
      * Run a given script inline on the remote server.
      *
-     * @param string $script
-     * @param int    $timeout
-     *
+     * @param  string  $script
+     * @param  int  $timeout
      * @return ShellResponse
      */
     protected function runInline($script, $timeout = 60)
@@ -203,9 +200,8 @@ trait InteractsWithSsh
     /**
      * Create a Process instance for the given script.
      *
-     * @param string $script
-     * @param int    $timeout
-     *
+     * @param  string  $script
+     * @param  int  $timeout
      * @return Process
      */
     protected function toProcess($script, $timeout)

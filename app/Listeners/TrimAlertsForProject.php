@@ -9,8 +9,7 @@ class TrimAlertsForProject
     /**
      * Handle the event.
      *
-     * @param AlertCreated $event
-     *
+     * @param  AlertCreated  $event
      * @return void
      */
     public function handle(AlertCreated $event)

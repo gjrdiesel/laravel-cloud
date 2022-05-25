@@ -9,8 +9,7 @@ class CheckPendingDeployments
     /**
      * Handle the event.
      *
-     * @param DeploymentFinished $event
-     *
+     * @param  DeploymentFinished  $event
      * @return void
      */
     public function handle(DeploymentFinished $event)
