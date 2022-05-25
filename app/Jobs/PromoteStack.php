@@ -4,11 +4,11 @@ namespace App\Jobs;
 
 use App\Stack;
 use Illuminate\Bus\Queueable;
-use Illuminate\Support\Facades\Bus;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Bus;
 
 class PromoteStack implements ShouldQueue
 {
@@ -31,9 +31,8 @@ class PromoteStack implements ShouldQueue
     /**
      * Create a new job instance.
      *
-     * @param \App\Stack $stack
-     * @param array      $options
-     *
+     * @param  \App\Stack  $stack
+     * @param  array  $options
      * @return void
      */
     public function __construct(Stack $stack, array $options = [])

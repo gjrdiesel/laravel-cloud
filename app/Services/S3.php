@@ -2,11 +2,11 @@
 
 namespace App\Services;
 
-use Exception;
-use Aws\S3\S3Client;
+use App\Contracts\StorageProviderClient;
 use App\DatabaseBackup;
 use App\StorageProvider;
-use App\Contracts\StorageProviderClient;
+use Aws\S3\S3Client;
+use Exception;
 
 class S3 implements StorageProviderClient
 {
@@ -20,8 +20,7 @@ class S3 implements StorageProviderClient
     /**
      * Create a new storage provider instance.
      *
-     * @param \App\StorageProvider $provider
-     *
+     * @param  \App\StorageProvider  $provider
      * @return void
      */
     public function __construct(StorageProvider $provider)
@@ -52,8 +51,7 @@ class S3 implements StorageProviderClient
     /**
      * Determine if the given bucket exists.
      *
-     * @param string $name
-     *
+     * @param  string  $name
      * @return bool
      */
     public function hasBucket($name)
@@ -72,8 +70,7 @@ class S3 implements StorageProviderClient
     /**
      * Create a bucket with the given name.
      *
-     * @param string $name
-     *
+     * @param  string  $name
      * @return void
      */
     public function createBucket($name)
@@ -86,8 +83,7 @@ class S3 implements StorageProviderClient
     /**
      * Delete the given bucket.
      *
-     * @param string $name
-     *
+     * @param  string  $name
      * @return void
      */
     public function deleteBucket($name)
@@ -100,8 +96,7 @@ class S3 implements StorageProviderClient
     /**
      * Determine if the given object exists.
      *
-     * @param string $path
-     *
+     * @param  string  $path
      * @return bool
      */
     public function has($path)
@@ -121,9 +116,8 @@ class S3 implements StorageProviderClient
     /**
      * Store an object at the given path.
      *
-     * @param string $path
-     * @param string $data
-     *
+     * @param  string  $path
+     * @param  string  $data
      * @return void
      */
     public function put($path, $data)
@@ -138,8 +132,7 @@ class S3 implements StorageProviderClient
     /**
      * Get the size of the object in megabytes.
      *
-     * @param string $path
-     *
+     * @param  string  $path
      * @return int
      */
     public function size($path)
@@ -161,8 +154,7 @@ class S3 implements StorageProviderClient
     /**
      * Delete the object at the given path.
      *
-     * @param string $path
-     *
+     * @param  string  $path
      * @return void
      */
     public function delete($path)
@@ -188,8 +180,7 @@ class S3 implements StorageProviderClient
     /**
      * Get the upload script for the storage provider.
      *
-     * @param \App\DatabaseBackup $backup
-     *
+     * @param  \App\DatabaseBackup  $backup
      * @return string
      */
     public function uploadScript(DatabaseBackup $backup)
@@ -205,8 +196,7 @@ class S3 implements StorageProviderClient
     /**
      * Get the download script for the storage provider.
      *
-     * @param \App\DatabaseBackup $backup
-     *
+     * @param  \App\DatabaseBackup  $backup
      * @return string
      */
     public function downloadScript(DatabaseBackup $backup)

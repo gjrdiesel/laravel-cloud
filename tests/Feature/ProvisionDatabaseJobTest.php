@@ -2,16 +2,16 @@
 
 namespace Tests\Feature;
 
-use Mockery;
-use Exception;
 use App\Database;
 use App\IpAddress;
-use Tests\TestCase;
-use App\Jobs\ProvisionDatabase;
-use Illuminate\Support\Facades\Bus;
 use App\Jobs\DeleteServerOnProvider;
+use App\Jobs\ProvisionDatabase;
+use Exception;
 use Facades\App\ServerProviderClientFactory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Bus;
+use Mockery;
+use Tests\TestCase;
 
 class ProvisionDatabaseJobTest extends TestCase
 {

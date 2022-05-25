@@ -2,16 +2,15 @@
 
 namespace App\Http\Controllers\API;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class StackDatabaseController extends Controller
 {
     /**
      * Handle the incoming request.
      *
-     * @param Request $request
-     *
+     * @param  Request  $request
      * @return mixed
      */
     public function update(Request $request)

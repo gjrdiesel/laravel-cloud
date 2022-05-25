@@ -3,18 +3,17 @@
 namespace App\Http\Controllers\API;
 
 use App\Database;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
-use App\Http\Controllers\Controller;
 
 class DatabaseTransferController extends Controller
 {
     /**
      * Handle the incoming request.
      *
-     * @param Request       $request
-     * @param \App\Database $database
-     *
+     * @param  Request  $request
+     * @param  \App\Database  $database
      * @return mixed
      */
     public function store(Request $request, Database $database)

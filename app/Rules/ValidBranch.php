@@ -24,9 +24,8 @@ class ValidBranch implements Rule
     /**
      * Create a new rule instance.
      *
-     * @param \App\SourceProvider $source
-     * @param string              $repository
-     *
+     * @param  \App\SourceProvider  $source
+     * @param  string  $repository
      * @return void
      */
     public function __construct($source, $repository)
@@ -38,9 +37,8 @@ class ValidBranch implements Rule
     /**
      * Determine if the validation rule passes.
      *
-     * @param string $attribute
-     * @param mixed  $value
-     *
+     * @param  string  $attribute
+     * @param  mixed  $value
      * @return bool
      */
     public function passes($attribute, $value)

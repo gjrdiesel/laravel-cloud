@@ -4,10 +4,10 @@ namespace App\Jobs;
 
 use App\StackTask;
 use Illuminate\Bus\Queueable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class RunStackTask implements ShouldQueue
 {
@@ -23,8 +23,7 @@ class RunStackTask implements ShouldQueue
     /**
      * Create a new job instance.
      *
-     * @param \App\StackTask $task
-     *
+     * @param  \App\StackTask  $task
      * @return void
      */
     public function __construct(StackTask $task)

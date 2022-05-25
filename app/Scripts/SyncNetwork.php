@@ -16,8 +16,7 @@ class SyncNetwork extends Script
     /**
      * Create a new script instance.
      *
-     * @param \App\Database $database
-     *
+     * @param  \App\Database  $database
      * @return void
      */
     public function __construct(Database $database)
