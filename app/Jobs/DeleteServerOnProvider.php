@@ -2,13 +2,13 @@
 
 namespace App\Jobs;
 
-use Exception;
 use App\Project;
+use Exception;
 use Illuminate\Bus\Queueable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class DeleteServerOnProvider implements ShouldQueue
 {
@@ -31,9 +31,8 @@ class DeleteServerOnProvider implements ShouldQueue
     /**
      * Create a new job instance.
      *
-     * @param \App\Project $project
-     * @param string       $providerServerId
-     *
+     * @param  \App\Project  $project
+     * @param  string  $providerServerId
      * @return void
      */
     public function __construct(Project $project, $providerServerId)
@@ -57,8 +56,7 @@ class DeleteServerOnProvider implements ShouldQueue
     /**
      * Handle a job failure.
      *
-     * @param \Exception $exception
-     *
+     * @param  \Exception  $exception
      * @return void
      */
     public function failed(Exception $exception)

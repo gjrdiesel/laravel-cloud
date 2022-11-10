@@ -7,10 +7,9 @@ class TaskFactory
     /**
      * Create a new task instance.
      *
-     * @param \App\Contracts\Provisionable $provisionable
-     * @param \App\Scripts\Script          $script
-     * @param array                        $options
-     *
+     * @param  \App\Contracts\Provisionable  $provisionable
+     * @param  \App\Scripts\Script  $script
+     * @param  array  $options
      * @return \App\Task
      */
     public function createFromScript($provisionable, $script, array $options = [])

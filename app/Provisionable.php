@@ -2,10 +2,10 @@
 
 namespace App;
 
-use App\Scripts\Script;
-use Facades\App\TaskFactory;
 use App\Scripts\GetAptLockStatus;
 use App\Scripts\GetCurrentDirectory;
+use App\Scripts\Script;
+use Facades\App\TaskFactory;
 
 trait Provisionable
 {
@@ -110,8 +110,7 @@ trait Provisionable
     /**
      * Set the SSH key attributes on the model.
      *
-     * @param object $value
-     *
+     * @param  object  $value
      * @return void
      */
     public function setKeypairAttribute($value)
@@ -224,9 +223,8 @@ trait Provisionable
     /**
      * Run the given script on the server.
      *
-     * @param \App\Scripts\Script $script
-     * @param array               $options
-     *
+     * @param  \App\Scripts\Script  $script
+     * @param  array  $options
      * @return Task
      */
     public function run(Script $script, array $options = [])
@@ -248,9 +246,8 @@ trait Provisionable
     /**
      * Run the given script in the background the server.
      *
-     * @param \App\Scripts\Script $script
-     * @param array               $options
-     *
+     * @param  \App\Scripts\Script  $script
+     * @param  array  $options
      * @return Task
      */
     public function runInBackground(Script $script, array $options = [])

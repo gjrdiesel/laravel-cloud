@@ -2,12 +2,12 @@
 
 namespace Tests\Feature;
 
-use App\Stack;
-use App\WebServer;
-use Tests\TestCase;
 use App\Environment;
 use App\Rules\ValidServeList;
+use App\Stack;
+use App\WebServer;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class ValidServeListRuleTest extends TestCase
 {

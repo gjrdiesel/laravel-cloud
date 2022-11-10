@@ -3,9 +3,9 @@
 namespace Tests\Feature;
 
 use App\Database;
-use Tests\TestCase;
 use App\Rules\DatabaseIsProvisioned;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class DatabaseIsProvisionedRuleTest extends TestCase
 {

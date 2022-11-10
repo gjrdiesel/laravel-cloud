@@ -23,9 +23,8 @@ class CaddyServerConfiguration
     /**
      * Create a new Caddy configuration instance.
      *
-     * @param \App\Server $server
-     * @param string      $domain
-     *
+     * @param  \App\Server  $server
+     * @param  string  $domain
      * @return void
      */
     public function __construct(Server $server, $domain)

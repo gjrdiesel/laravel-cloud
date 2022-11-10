@@ -2,10 +2,10 @@
 
 namespace App\Services;
 
-use App\Stack;
-use Exception;
 use App\Contracts\DnsProvider;
+use App\Stack;
 use Aws\Route53\Route53Client;
+use Exception;
 
 class Route53 implements DnsProvider
 {
@@ -19,8 +19,7 @@ class Route53 implements DnsProvider
     /**
      * Create a new Route 53 service instance.
      *
-     * @param \Aws\Route53\Route53Client $client
-     *
+     * @param  \Aws\Route53\Route53Client  $client
      * @return void
      */
     public function __construct(Route53Client $client)
@@ -31,8 +30,7 @@ class Route53 implements DnsProvider
     /**
      * Add a DNS record for the given stack.
      *
-     * @param \App\Stack $stack
-     *
+     * @param  \App\Stack  $stack
      * @return string
      */
     public function addRecord(Stack $stack)
@@ -50,8 +48,7 @@ class Route53 implements DnsProvider
     /**
      * Determine if the stack's DNS record has propagated.
      *
-     * @param \App\Stack $stack
-     *
+     * @param  \App\Stack  $stack
      * @return bool
      */
     public function propagated(Stack $stack)
@@ -64,8 +61,7 @@ class Route53 implements DnsProvider
     /**
      * Delete a DNS record for the given stack.
      *
-     * @param \App\Stack $stack
-     *
+     * @param  \App\Stack  $stack
      * @return void
      */
     public function deleteRecord(Stack $stack)
@@ -89,9 +85,8 @@ class Route53 implements DnsProvider
     /**
      * Delete a DNS record for the given name and address.
      *
-     * @param string $name
-     * @param string $ipAddress
-     *
+     * @param  string  $name
+     * @param  string  $ipAddress
      * @return void
      */
     public function deleteRecordByName($name, $ipAddress)
@@ -102,9 +97,8 @@ class Route53 implements DnsProvider
     /**
      * Perform an action on the Route 53 record.
      *
-     * @param string     $action
-     * @param \App\Stack $stack
-     *
+     * @param  string  $action
+     * @param  \App\Stack  $stack
      * @return mixed
      */
     protected function updateRecord($action, Stack $stack)
@@ -118,10 +112,9 @@ class Route53 implements DnsProvider
     /**
      * Perform an action on the Route 53 record.
      *
-     * @param string $action
-     * @param string $name
-     * @param string $ipAddress
-     *
+     * @param  string  $action
+     * @param  string  $name
+     * @param  string  $ipAddress
      * @return mixed
      */
     protected function updateRecordByName($action, $name, $ipAddress)

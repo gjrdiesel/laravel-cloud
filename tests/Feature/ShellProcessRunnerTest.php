@@ -2,11 +2,11 @@
 
 namespace Tests\Feature;
 
-use Mockery;
-use Tests\TestCase;
 use App\ShellProcessRunner;
-use Symfony\Component\Process\Process;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Mockery;
+use Symfony\Component\Process\Process;
+use Tests\TestCase;
 
 class ShellProcessRunnerTest extends TestCase
 {
