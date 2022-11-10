@@ -2,10 +2,10 @@
 
 namespace App;
 
-use App\Jobs\RunStackTask;
 use App\Events\StackTaskFailed;
-use App\Events\StackTaskRunning;
 use App\Events\StackTaskFinished;
+use App\Events\StackTaskRunning;
+use App\Jobs\RunStackTask;
 use Illuminate\Database\Eloquent\Model;
 
 class StackTask extends Model

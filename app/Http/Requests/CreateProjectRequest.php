@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests;
 
-use App\SourceProvider;
 use App\Rules\ValidRepository;
-use Illuminate\Validation\Rule;
+use App\SourceProvider;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class CreateProjectRequest extends FormRequest
 {
@@ -50,8 +50,7 @@ class CreateProjectRequest extends FormRequest
     /**
      * Validate the region and size for the provider.
      *
-     * @param \Illuminate\Validator\Validator $validator
-     *
+     * @param  \Illuminate\Validator\Validator  $validator
      * @return \Illuminate\Validator\Validator
      */
     protected function validateRegionAndSize($validator)

@@ -2,9 +2,9 @@
 
 namespace App\Scripts;
 
-use App\Stack;
 use App\Balancer;
 use App\CaddyBalancerConfiguration;
+use App\Stack;
 
 class SyncBalancer extends Script
 {
@@ -18,8 +18,7 @@ class SyncBalancer extends Script
     /**
      * Create a new script instance.
      *
-     * @param \App\Balancer $balancer
-     *
+     * @param  \App\Balancer  $balancer
      * @return void
      */
     public function __construct(Balancer $balancer)
@@ -82,10 +81,9 @@ class SyncBalancer extends Script
     /**
      * Get the balancer configurations for the given domain and proxies.
      *
-     * @param \App\Stack $stack
-     * @param array      $domains
-     * @param array      $proxyTo
-     *
+     * @param  \App\Stack  $stack
+     * @param  array  $domains
+     * @param  array  $proxyTo
      * @return array
      */
     protected function balancerConfigurations(Stack $stack, $domains, $proxyTo)

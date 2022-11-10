@@ -11,8 +11,7 @@ class ProvisionBalancer extends ServerProvisioner
     /**
      * Create a new job instance.
      *
-     * @param \App\Balancer $provisionable
-     *
+     * @param  \App\Balancer  $provisionable
      * @return void
      */
     public function __construct(Balancer $provisionable)

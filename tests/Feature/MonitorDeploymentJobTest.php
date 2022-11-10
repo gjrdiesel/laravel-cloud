@@ -2,16 +2,16 @@
 
 namespace Tests\Feature;
 
-use Exception;
-use Carbon\Carbon;
 use App\Deployment;
-use Tests\TestCase;
-use Tests\TestCase;
 use App\Jobs\Activate;
-use App\ServerDeployment;
 use App\Jobs\MonitorDeployment;
-use Illuminate\Support\Facades\Bus;
+use App\ServerDeployment;
+use Carbon\Carbon;
+use Exception;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Bus;
+use Tests\TestCase;
+use Tests\TestCase;
 
 class MonitorDeploymentJobTest extends TestCase
 {

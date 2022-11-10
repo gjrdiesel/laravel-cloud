@@ -18,8 +18,7 @@ class ProvisionAppServer extends ProvisioningScript
     /**
      * Create a new script instance.
      *
-     * @param \App\AppServer $server
-     *
+     * @param  \App\AppServer  $server
      * @return void
      */
     public function __construct(AppServer $server)

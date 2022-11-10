@@ -2,11 +2,11 @@
 
 namespace Tests\Feature;
 
-use App\Project;
-use Tests\TestCase;
 use App\Jobs\DeleteServerOnProvider;
+use App\Project;
 use Facades\App\ServerProviderClientFactory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class DeleteServerOnProviderJobTest extends TestCase
 {
