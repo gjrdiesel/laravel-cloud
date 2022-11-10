@@ -24,9 +24,8 @@ class ValidRepository implements Rule
     /**
      * Create a new rule instance.
      *
-     * @param \App\SourceProvider $source
-     * @param string|null         $branch
-     *
+     * @param  \App\SourceProvider  $source
+     * @param  string|null  $branch
      * @return void
      */
     public function __construct($source, $branch = null)
@@ -38,9 +37,8 @@ class ValidRepository implements Rule
     /**
      * Determine if the validation rule passes.
      *
-     * @param string $attribute
-     * @param mixed  $value
-     *
+     * @param  string  $attribute
+     * @param  mixed  $value
      * @return bool
      */
     public function passes($attribute, $value)

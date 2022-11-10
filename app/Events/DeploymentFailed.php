@@ -2,13 +2,12 @@
 
 namespace App\Events;
 
-use Exception;
-use App\Deployment;
-use App\Contracts\HasStack;
 use App\Contracts\Alertable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Foundation\Events\Dispatchable;
+use App\Contracts\HasStack;
+use App\Deployment;
 use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Queue\SerializesModels;
 
 class DeploymentFailed implements Alertable, HasStack
 {
@@ -24,9 +23,8 @@ class DeploymentFailed implements Alertable, HasStack
     /**
      * Create a new event instance.
      *
-     * @param \App\Deployment $deployment
-     * @param \Exception|null $exception
-     *
+     * @param  \App\Deployment  $deployment
+     * @param  \Exception|null  $exception
      * @return void
      */
     public function __construct(Deployment $deployment, $exception = null)

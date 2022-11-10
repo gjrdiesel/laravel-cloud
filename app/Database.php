@@ -2,15 +2,15 @@
 
 namespace App;
 
-use Carbon\Carbon;
-use App\Jobs\SyncNetwork;
+use App\Callbacks\MarkAsProvisioned;
+use App\Contracts\Provisionable as ProvisionableContract;
+use App\Jobs\DeleteServerOnProvider;
 use App\Jobs\ProvisionDatabase;
 use App\Jobs\StoreDatabaseBackup;
-use App\Callbacks\MarkAsProvisioned;
-use App\Jobs\DeleteServerOnProvider;
-use Illuminate\Support\Facades\Cache;
+use App\Jobs\SyncNetwork;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
-use App\Contracts\Provisionable as ProvisionableContract;
+use Illuminate\Support\Facades\Cache;
 
 class Database extends Model implements ProvisionableContract
 {
@@ -78,8 +78,7 @@ class Database extends Model implements ProvisionableContract
     /**
      * Determine if the given user can SSH into the balancer.
      *
-     * @param \App\User $user
-     *
+     * @param  \App\User  $user
      * @return bool
      */
     public function canSsh(User $user)
@@ -90,8 +89,7 @@ class Database extends Model implements ProvisionableContract
     /**
      * Sync the network for the database.
      *
-     * @param int $delay
-     *
+     * @param  int  $delay
      * @return void
      */
     public function syncNetwork($delay = 0)
@@ -115,8 +113,7 @@ class Database extends Model implements ProvisionableContract
     /**
      * Determine if the database allows access from a given IP address.
      *
-     * @param object|string $address
-     *
+     * @param  object|string  $address
      * @return bool
      */
     public function allowsAccessFrom($address)
@@ -152,9 +149,8 @@ class Database extends Model implements ProvisionableContract
     /**
      * Create a new backup of the database.
      *
-     * @param \App\StorageProvider $provider
-     * @param string               $databaseName
-     *
+     * @param  \App\StorageProvider  $provider
+     * @param  string  $databaseName
      * @return \App\DatabaseBackup
      */
     public function backup(StorageProvider $provider, $databaseName)
@@ -175,8 +171,7 @@ class Database extends Model implements ProvisionableContract
     /**
      * Trim the backups for a given database.
      *
-     * @param \App\DatabaseBackup $backup
-     *
+     * @param  \App\DatabaseBackup  $backup
      * @return void
      */
     protected function trimBackups(DatabaseBackup $backup)
@@ -233,9 +228,9 @@ class Database extends Model implements ProvisionableContract
     /**
      * Delete the model from the database.
      *
-     * @throws \Exception
-     *
      * @return bool|null
+     *
+     * @throws \Exception
      */
     public function delete()
     {

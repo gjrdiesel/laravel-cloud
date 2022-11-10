@@ -16,9 +16,8 @@ class ShellOutput
     /**
      * Invoke the class.
      *
-     * @param string $type
-     * @param string $line
-     *
+     * @param  string  $type
+     * @param  string  $line
      * @return void
      */
     public function __invoke($type, $line)

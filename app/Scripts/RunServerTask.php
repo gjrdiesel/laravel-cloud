@@ -23,8 +23,7 @@ class RunServerTask extends Script
     /**
      * Create a new script instance.
      *
-     * @param \App\ServerTask $task
-     *
+     * @param  \App\ServerTask  $task
      * @return void
      */
     public function __construct(ServerTask $task)

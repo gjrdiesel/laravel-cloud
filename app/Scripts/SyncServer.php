@@ -18,8 +18,7 @@ class SyncServer extends Script
     /**
      * Create a new script instance.
      *
-     * @param \App\Server $server
-     *
+     * @param  \App\Server  $server
      * @return void
      */
     public function __construct(Server $server)
