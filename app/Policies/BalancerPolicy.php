@@ -2,8 +2,8 @@
 
 namespace App\Policies;
 
-use App\User;
 use App\Balancer;
+use App\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class BalancerPolicy
@@ -13,9 +13,8 @@ class BalancerPolicy
     /**
      * Determine whether the user can delete the balancer.
      *
-     * @param \App\User     $user
-     * @param \App\Balancer $balancer
-     *
+     * @param  \App\User  $user
+     * @param  \App\Balancer  $balancer
      * @return mixed
      */
     public function delete(User $user, Balancer $balancer)

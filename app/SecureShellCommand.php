@@ -7,12 +7,11 @@ class SecureShellCommand
     /**
      * Build an SSH command for the given script.
      *
-     * @param string $ipAddress
-     * @param string $keyPath
-     * @param int    $port
-     * @param string $user
-     * @param string $script
-     *
+     * @param  string  $ipAddress
+     * @param  string  $keyPath
+     * @param  int  $port
+     * @param  string  $user
+     * @param  string  $script
      * @return string
      */
     public static function forScript($ipAddress, $port, $keyPath, $user, $script)
@@ -31,13 +30,12 @@ class SecureShellCommand
     /**
      * Build an SSH command for a file upload.
      *
-     * @param string $ipAddress
-     * @param string $keyPath
-     * @param int    $port
-     * @param string $user
-     * @param string $from
-     * @param string $to
-     *
+     * @param  string  $ipAddress
+     * @param  string  $keyPath
+     * @param  int  $port
+     * @param  string  $user
+     * @param  string  $from
+     * @param  string  $to
      * @return string
      */
     public static function forUpload($ipAddress, $port, $keyPath, $user, $from, $to)

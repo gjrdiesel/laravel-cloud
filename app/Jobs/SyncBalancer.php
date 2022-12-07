@@ -4,10 +4,10 @@ namespace App\Jobs;
 
 use App\Balancer;
 use Illuminate\Bus\Queueable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class SyncBalancer implements ShouldQueue
 {
@@ -30,8 +30,7 @@ class SyncBalancer implements ShouldQueue
     /**
      * Create a new job instance.
      *
-     * @param Balancer $balancer
-     *
+     * @param  Balancer  $balancer
      * @return void
      */
     public function __construct(Balancer $balancer)

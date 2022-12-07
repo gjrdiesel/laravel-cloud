@@ -9,8 +9,7 @@ class ResetDeploymentStatus
     /**
      * Handle the event.
      *
-     * @param \App\Contracts\HasStack $event
-     *
+     * @param  \App\Contracts\HasStack  $event
      * @return void
      */
     public function handle(HasStack $event)

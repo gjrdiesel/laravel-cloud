@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use App\Stack;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Illuminate\Validation\ValidationException;
 
 class DaemonController extends Controller
@@ -12,9 +12,8 @@ class DaemonController extends Controller
     /**
      * Update the daemon states for the stack.
      *
-     * @param Request    $request
-     * @param \App\Stack $stack
-     *
+     * @param  Request  $request
+     * @param  \App\Stack  $stack
      * @return mixed
      */
     public function update(Request $request, Stack $stack)
