@@ -10,8 +10,7 @@ class StorageProviderClientFactory
     /**
      * Create a storage provider client instance for the given provider.
      *
-     * @param \App\StorageProvider $provider
-     *
+     * @param  \App\StorageProvider  $provider
      * @return \App\Contracts\StorageProviderClient
      */
     public function make(StorageProvider $provider)

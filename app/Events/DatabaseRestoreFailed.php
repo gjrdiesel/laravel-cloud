@@ -3,9 +3,9 @@
 namespace App\Events;
 
 use App\DatabaseRestore;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Queue\SerializesModels;
 
 class DatabaseRestoreFailed
 {
@@ -21,8 +21,7 @@ class DatabaseRestoreFailed
     /**
      * Create a new event instance.
      *
-     * @param \App\DatabaseRestore $restore
-     *
+     * @param  \App\DatabaseRestore  $restore
      * @return void
      */
     public function __construct(DatabaseRestore $restore)

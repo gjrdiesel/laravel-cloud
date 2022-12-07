@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
 class CollaboratorController extends Controller
 {
@@ -31,8 +31,7 @@ class CollaboratorController extends Controller
     /**
      * Remove a user from all of the user's owned projects.
      *
-     * @param Request $request
-     *
+     * @param  Request  $request
      * @return Response
      */
     public function destroy(Request $request)

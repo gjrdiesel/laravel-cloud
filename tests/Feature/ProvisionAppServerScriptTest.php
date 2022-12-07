@@ -3,9 +3,9 @@
 namespace Tests\Feature;
 
 use App\AppServer;
-use Tests\TestCase;
 use App\Scripts\ProvisionAppServer;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class ProvisionAppServerScriptTest extends TestCase
 {

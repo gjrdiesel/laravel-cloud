@@ -3,9 +3,9 @@
 namespace App\Events;
 
 use App\ServerDeployment;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Queue\SerializesModels;
 
 class ServerDeploymentBuilt
 {
@@ -21,8 +21,7 @@ class ServerDeploymentBuilt
     /**
      * Create a new event instance.
      *
-     * @param \App\ServerDeployment $deployment
-     *
+     * @param  \App\ServerDeployment  $deployment
      * @return void
      */
     public function __construct(ServerDeployment $deployment)

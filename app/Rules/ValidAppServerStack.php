@@ -16,8 +16,7 @@ class ValidAppServerStack implements Rule
     /**
      * Create a new rule instance.
      *
-     * @param \App\Http\Requests\CreateStackRequest $request
-     *
+     * @param  \App\Http\Requests\CreateStackRequest  $request
      * @return void
      */
     public function __construct($request)
@@ -28,9 +27,8 @@ class ValidAppServerStack implements Rule
     /**
      * Determine if the validation rule passes.
      *
-     * @param string $attribute
-     * @param mixed  $value
-     *
+     * @param  string  $attribute
+     * @param  mixed  $value
      * @return bool
      */
     public function passes($attribute, $value)

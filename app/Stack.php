@@ -2,17 +2,17 @@
 
 namespace App;
 
-use Exception;
-use Carbon\Carbon;
-use App\Jobs\SyncServers;
-use Illuminate\Support\Str;
+use App\Contracts\StackDefinition;
 use App\Events\StackDeleting;
 use App\Events\StackProvisioned;
 use App\Events\StackProvisioning;
-use App\Contracts\StackDefinition;
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Database\Eloquent\Model;
 use App\Exceptions\AlreadyDeployingException;
+use App\Jobs\SyncServers;
+use Carbon\Carbon;
+use Exception;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Str;
 
 class Stack extends Model
 {
@@ -271,10 +271,9 @@ class Stack extends Model
     /**
      * Run a new task on the stack.
      *
-     * @param string $name
-     * @param string $user
-     * @param array  $commands
-     *
+     * @param  string  $name
+     * @param  string  $user
+     * @param  array  $commands
      * @return \App\StackTask
      */
     public function dispatchTask($name, $user, array $commands)
@@ -406,8 +405,7 @@ class Stack extends Model
     /**
      * Determine if the given domain is the canonical domain.
      *
-     * @param string $domain
-     *
+     * @param  string  $domain
      * @return bool
      */
     public function isCanonicalDomain($domain)
@@ -420,8 +418,7 @@ class Stack extends Model
     /**
      * Determine the canonical domain for the given domain.
      *
-     * @param string $domain
-     *
+     * @param  string  $domain
      * @return string
      */
     public function canonicalDomain($domain)
@@ -447,8 +444,7 @@ class Stack extends Model
     /**
      * Get the reverse of the given domain's canonical domain.
      *
-     * @param string $domain
-     *
+     * @param  string  $domain
      * @return string
      */
     public function nonCanonicalDomain($domain)
@@ -497,8 +493,7 @@ class Stack extends Model
     /**
      * Deploy fresh code using the deployment instructions.
      *
-     * @param \App\DeploymentInstructions $instructions
-     *
+     * @param  \App\DeploymentInstructions  $instructions
      * @return \App\Deployment
      */
     public function deployUsing(DeploymentInstructions $instructions)
@@ -514,14 +509,13 @@ class Stack extends Model
     /**
      * Deploy fresh code to the stack.
      *
-     * @param string $hash
-     * @param array  $build
-     * @param array  $activate
-     * @param string $hash
-     * @param array  $directories
-     * @param array  $daemons
-     * @param array  $schedule
-     *
+     * @param  string  $hash
+     * @param  array  $build
+     * @param  array  $activate
+     * @param  string  $hash
+     * @param  array  $directories
+     * @param  array  $daemons
+     * @param  array  $schedule
      * @return \App\Deployment
      */
     public function deploy($hash, array $build = [], array $activate = [],
@@ -553,13 +547,12 @@ class Stack extends Model
     /**
      * Deploy the given branch to the stack.
      *
-     * @param string $branch
-     * @param array  $build
-     * @param array  $activate
-     * @param array  $directories
-     * @param array  $daemons
-     * @param array  $schedule
-     *
+     * @param  string  $branch
+     * @param  array  $build
+     * @param  array  $activate
+     * @param  array  $directories
+     * @param  array  $daemons
+     * @param  array  $schedule
      * @return \App\Deployment
      */
     public function deployBranch($branch, array $build = [], array $activate = [],
@@ -580,13 +573,12 @@ class Stack extends Model
     /**
      * Deploy the given hash to the stack.
      *
-     * @param string $hash
-     * @param array  $build
-     * @param array  $activate
-     * @param array  $directories
-     * @param array  $daemons
-     * @param array  $schedule
-     *
+     * @param  string  $hash
+     * @param  array  $build
+     * @param  array  $activate
+     * @param  array  $directories
+     * @param  array  $daemons
+     * @param  array  $schedule
      * @return \App\Deployment
      */
     public function deployHash($hash, array $build = [], array $activate = [],
@@ -614,13 +606,12 @@ class Stack extends Model
     /**
      * Create a new deployment record for the stack.
      *
-     * @param string $hash
-     * @param array  $build
-     * @param array  $activate
-     * @param array  $directories
-     * @param array  $daemons
-     * @param array  $schedule
-     *
+     * @param  string  $hash
+     * @param  array  $build
+     * @param  array  $activate
+     * @param  array  $directories
+     * @param  array  $daemons
+     * @param  array  $schedule
      * @return \App\Deployment
      */
     protected function createDeployment($hash, array $build = [], array $activate = [],
@@ -669,9 +660,8 @@ class Stack extends Model
     /**
      * Store the information for a pending deployment.
      *
-     * @param \App\Hook $hook
-     * @param string    $hash
-     *
+     * @param  \App\Hook  $hook
+     * @param  string  $hash
      * @return void
      */
     public function storePendingDeployment(Hook $hook, $hash)
@@ -757,9 +747,8 @@ class Stack extends Model
     /**
      * Define the stack using the given definition.
      *
-     * @param \App\Environment               $environment
-     * @param \App\Contracts\StackDefinition $definition
-     *
+     * @param  \App\Environment  $environment
+     * @param  \App\Contracts\StackDefinition  $definition
      * @return $this
      */
     public static function createForEnvironment(Environment $environment,
@@ -798,8 +787,7 @@ class Stack extends Model
     /**
      * Create the server records for the stack.
      *
-     * @param \App\Contracts\StackDefinition $definition
-     *
+     * @param  \App\Contracts\StackDefinition  $definition
      * @return $this
      */
     protected function createServerRecords(StackDefinition $definition)
@@ -881,9 +869,9 @@ class Stack extends Model
     /**
      * Delete the model from the database.
      *
-     * @throws \Exception
-     *
      * @return bool|null
+     *
+     * @throws \Exception
      */
     public function delete()
     {

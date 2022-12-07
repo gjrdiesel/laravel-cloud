@@ -2,15 +2,15 @@
 
 namespace App\Services;
 
+use App\Contracts\SourceProviderClient;
+use App\Deployment;
+use App\Exceptions\ManifestNotFoundException;
 use App\Hook;
+use App\SourceProvider;
 use App\Stack;
 use Exception;
-use App\Deployment;
 use GuzzleHttp\Client;
-use App\SourceProvider;
-use App\Contracts\SourceProviderClient;
 use GuzzleHttp\Exception\ClientException;
-use App\Exceptions\ManifestNotFoundException;
 
 class GitHub implements SourceProviderClient
 {
@@ -24,8 +24,7 @@ class GitHub implements SourceProviderClient
     /**
      * Create a new GitHub service instance.
      *
-     * @param Source $source
-     *
+     * @param  Source  $source
      * @return void
      */
     public function __construct(SourceProvider $source)
@@ -52,9 +51,8 @@ class GitHub implements SourceProviderClient
     /**
      * Validate the given repository and branch are valid.
      *
-     * @param string $repository
-     * @param string $branch
-     *
+     * @param  string  $repository
+     * @param  string  $branch
      * @return bool
      */
     public function validRepository($repository, $branch)
@@ -81,9 +79,8 @@ class GitHub implements SourceProviderClient
     /**
      * Validate the given repository and commit hash are valid.
      *
-     * @param string $repository
-     * @param string $hash
-     *
+     * @param  string  $repository
+     * @param  string  $hash
      * @return bool
      */
     public function validCommit($repository, $hash)
@@ -104,9 +101,8 @@ class GitHub implements SourceProviderClient
     /**
      * Get the latest commit hash for the given repository and branch.
      *
-     * @param string $repository
-     * @param string $branch
-     *
+     * @param  string  $repository
+     * @param  string  $branch
      * @return string
      */
     public function latestHashFor($repository, $branch)
@@ -119,8 +115,7 @@ class GitHub implements SourceProviderClient
     /**
      * Get the tarball URL for the given deployment.
      *
-     * @param \App\Deployment $deployment
-     *
+     * @param  \App\Deployment  $deployment
      * @return string
      */
     public function tarballUrl(Deployment $deployment)
@@ -136,8 +131,7 @@ class GitHub implements SourceProviderClient
     /**
      * Publish the given hook.
      *
-     * @param \App\Hook $hook
-     *
+     * @param  \App\Hook  $hook
      * @return void
      */
     public function publishHook(Hook $hook)
@@ -165,9 +159,8 @@ class GitHub implements SourceProviderClient
     /**
      * Determine if the given hook payload is a test.
      *
-     * @param \App\Hook $hook
-     * @param array     $payload
-     *
+     * @param  \App\Hook  $hook
+     * @param  array  $payload
      * @return bool
      */
     public function isTestHookPayload(Hook $hook, array $payload)
@@ -178,9 +171,8 @@ class GitHub implements SourceProviderClient
     /**
      * Determine if the given hook payload applies to the hook.
      *
-     * @param \App\Hook $hook
-     * @param array     $payload
-     *
+     * @param  \App\Hook  $hook
+     * @param  array  $payload
      * @return bool
      */
     public function receivesHookPayload(Hook $hook, array $payload)
@@ -193,8 +185,7 @@ class GitHub implements SourceProviderClient
     /**
      * Get the commit hash from the given hook payload.
      *
-     * @param array $payload
-     *
+     * @param  array  $payload
      * @return string|null
      */
     public function extractCommitFromHookPayload(array $payload)
@@ -205,8 +196,7 @@ class GitHub implements SourceProviderClient
     /**
      * Unpublish the given hook.
      *
-     * @param \App\Hook $hook
-     *
+     * @param  \App\Hook  $hook
      * @return void
      */
     public function unpublishHook(Hook $hook)
@@ -228,8 +218,7 @@ class GitHub implements SourceProviderClient
     /**
      * Delete any hooks matching the given hooks URL.
      *
-     * @param \App\Hook $hook
-     *
+     * @param  \App\Hook  $hook
      * @return void
      */
     protected function deleteHooksWithMatchingUrl(Hook $hook)
@@ -242,8 +231,7 @@ class GitHub implements SourceProviderClient
     /**
      * Find a hook by the given hook's URL.
      *
-     * @param \App\Hook $hook
-     *
+     * @param  \App\Hook  $hook
      * @return array|null
      */
     protected function findHookWithMatchingUrl(Hook $hook)
@@ -259,9 +247,8 @@ class GitHub implements SourceProviderClient
     /**
      * Delete a hook by the given repository and ID.
      *
-     * @param string $repository
-     * @param string $id
-     *
+     * @param  string  $repository
+     * @param  string  $id
      * @return void
      */
     protected function deleteHookById($repository, $id)
@@ -272,10 +259,9 @@ class GitHub implements SourceProviderClient
     /**
      * Get the manifest content for the given stack and hash.
      *
-     * @param \App\Stack $stack
-     * @param string     $repository
-     * @param string     $hash
-     *
+     * @param  \App\Stack  $stack
+     * @param  string  $repository
+     * @param  string  $hash
      * @return string
      */
     public function manifest(Stack $stack, $repository, $hash)
@@ -296,10 +282,9 @@ class GitHub implements SourceProviderClient
     /**
      * Make an HTTP request to GitHub.
      *
-     * @param string $method
-     * @param string $path
-     * @param array  $parameters
-     *
+     * @param  string  $method
+     * @param  string  $path
+     * @param  array  $parameters
      * @return array
      */
     protected function request($method, $path, array $parameters = [])

@@ -23,9 +23,8 @@ class ServerRecordCreator
     /**
      * Create a new stack server creator instance.
      *
-     * @param \App\Stack                     $stack
-     * @param \App\Contracts\StackDefinition $definition
-     *
+     * @param  \App\Stack  $stack
+     * @param  \App\Contracts\StackDefinition  $definition
      * @return void
      */
     public function __construct(Stack $stack, StackDefinition $definition)
@@ -58,9 +57,8 @@ class ServerRecordCreator
     /**
      * Get the base server attributes for the given definition.
      *
-     * @param int   $index
-     * @param array $definition
-     *
+     * @param  int  $index
+     * @param  array  $definition
      * @return array
      */
     protected function baseAttributes($index, array $definition)

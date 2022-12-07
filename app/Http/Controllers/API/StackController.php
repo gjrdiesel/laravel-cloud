@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
+use App\Http\Requests\ProvisionStackRequest;
 use App\Stack;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\Controller;
-use App\Http\Requests\ProvisionStackRequest;
 use Illuminate\Validation\ValidationException;
 
 class StackController extends Controller
@@ -14,8 +14,7 @@ class StackController extends Controller
     /**
      * Get all of the stacks for the project.
      *
-     * @param Request $request
-     *
+     * @param  Request  $request
      * @return Response
      */
     public function index(Request $request)
@@ -31,8 +30,7 @@ class StackController extends Controller
     /**
      * Provision a stack.
      *
-     * @param ProvisionStackRequest $request
-     *
+     * @param  ProvisionStackRequest  $request
      * @return mixed
      */
     public function store(ProvisionStackRequest $request)
@@ -47,8 +45,7 @@ class StackController extends Controller
     /**
      * Delete the given stack.
      *
-     * @param \App\Stack $stack
-     *
+     * @param  \App\Stack  $stack
      * @return Response
      */
     public function destroy(Stack $stack)
