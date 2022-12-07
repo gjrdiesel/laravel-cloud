@@ -4,10 +4,10 @@ namespace App\Jobs;
 
 use App\Task;
 use Illuminate\Bus\Queueable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class FinishTask implements ShouldQueue
 {
@@ -30,9 +30,8 @@ class FinishTask implements ShouldQueue
     /**
      * Create a new job instance.
      *
-     * @param \App\Task $task
-     * @param int       $exitCode
-     *
+     * @param  \App\Task  $task
+     * @param  int  $exitCode
      * @return void
      */
     public function __construct(Task $task, $exitCode = 0)

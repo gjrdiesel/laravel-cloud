@@ -3,8 +3,8 @@
 namespace App\Events;
 
 use App\Alert;
-use Illuminate\Queue\SerializesModels;
 use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Queue\SerializesModels;
 
 class AlertCreated
 {
@@ -20,8 +20,7 @@ class AlertCreated
     /**
      * Create a new event instance.
      *
-     * @param \App\Alert $alert
-     *
+     * @param  \App\Alert  $alert
      * @return void
      */
     public function __construct(Alert $alert)

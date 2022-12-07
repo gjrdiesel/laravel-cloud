@@ -2,8 +2,8 @@
 
 namespace App\Callbacks;
 
-use App\Task;
 use App\ServerDeployment;
+use App\Task;
 
 class CheckBuild
 {
@@ -17,8 +17,7 @@ class CheckBuild
     /**
      * Create a new callback instance.
      *
-     * @param int $id
-     *
+     * @param  int  $id
      * @return void
      */
     public function __construct($id)
@@ -29,8 +28,7 @@ class CheckBuild
     /**
      * Handle the callback.
      *
-     * @param Task $task
-     *
+     * @param  Task  $task
      * @return void
      */
     public function handle(Task $task)

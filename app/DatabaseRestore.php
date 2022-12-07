@@ -3,8 +3,8 @@
 namespace App;
 
 use App\Events\DatabaseRestoreFailed;
-use App\Events\DatabaseRestoreRunning;
 use App\Events\DatabaseRestoreFinished;
+use App\Events\DatabaseRestoreRunning;
 use Illuminate\Database\Eloquent\Model;
 
 class DatabaseRestore extends Model
@@ -56,8 +56,7 @@ class DatabaseRestore extends Model
     /**
      * Mark the database restore as finished.
      *
-     * @param string $output
-     *
+     * @param  string  $output
      * @return void
      */
     public function markAsFinished($output = '')
@@ -72,9 +71,8 @@ class DatabaseRestore extends Model
     /**
      * Mark the database restore as failed.
      *
-     * @param int    $exitCode
-     * @param string $output
-     *
+     * @param  int  $exitCode
+     * @param  string  $output
      * @return void
      */
     public function markAsFailed($exitCode, $output = '')
